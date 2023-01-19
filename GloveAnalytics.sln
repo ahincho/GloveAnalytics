@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloveForms", "GloveForms\Gl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GloveDatabase", "GloveDatabase", "{BC999C9E-D2C6-4A02-A51E-1FB8D5257C07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloveQueries", "GloveQueries\GloveQueries.csproj", "{1F74D8E5-C9B3-4DD0-A1A8-2FEF8B180599}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloveQueries", "GloveQueries\GloveQueries.csproj", "{1F74D8E5-C9B3-4DD0-A1A8-2FEF8B180599}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GloveEntities", "GloveEntities", "{DFADC69A-9C6E-4FE8-9EE8-6826FCD1763A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloveClasses", "GloveClasses\GloveClasses.csproj", "{284C8E0B-9C9F-4B14-A259-64511B1AF831}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{1F74D8E5-C9B3-4DD0-A1A8-2FEF8B180599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F74D8E5-C9B3-4DD0-A1A8-2FEF8B180599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F74D8E5-C9B3-4DD0-A1A8-2FEF8B180599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284C8E0B-9C9F-4B14-A259-64511B1AF831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284C8E0B-9C9F-4B14-A259-64511B1AF831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284C8E0B-9C9F-4B14-A259-64511B1AF831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284C8E0B-9C9F-4B14-A259-64511B1AF831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0EF2AE14-7D11-4568-930C-01D8F7703EDE} = {0E3E6DDA-0A6C-4857-954D-3846F5B47B58}
 		{1F74D8E5-C9B3-4DD0-A1A8-2FEF8B180599} = {BC999C9E-D2C6-4A02-A51E-1FB8D5257C07}
+		{284C8E0B-9C9F-4B14-A259-64511B1AF831} = {DFADC69A-9C6E-4FE8-9EE8-6826FCD1763A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D4B208AA-B56F-47BB-8C71-56AD11BCA185}
