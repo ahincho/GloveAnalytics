@@ -20,6 +20,7 @@ namespace GloveClasses
 
         // Class Constructors
 
+        #pragma warning disable CS8618
         public Status(int id, string name, int currentStatus)
         {
             setId(id);
