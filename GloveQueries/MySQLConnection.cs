@@ -11,7 +11,7 @@ namespace GloveDatabase
     class MySQLiteConnection
     {
         
-        private string Source = "D:/ProyectosVisualStudio/GloveAnalytics/GloveQueries/GloveTest.db";
+        private string Source = "D:/Proyectos Visual Studio/GloveAnalytics/GloveQueries/GloveTest.db";
         private SQLiteConnection? Instance = null;
 
         public SQLiteConnection GetConnection()
@@ -19,9 +19,9 @@ namespace GloveDatabase
             if (Instance == null)
             {
                 Instance = new SQLiteConnection("Data Source = " + Source);
-                Console.WriteLine("Data Source = " + Source);
+                // Console.WriteLine("Data Source = " + Source);
             }
-            Console.WriteLine("Abierto");
+            // Console.WriteLine("Abierto");
             return Instance;
         }
 
@@ -32,7 +32,7 @@ namespace GloveDatabase
                 Instance.Close();
                 Instance = null;
             }
-            Console.WriteLine("Cerrado");
+            // Console.WriteLine("Cerrado");
         }
 
     }

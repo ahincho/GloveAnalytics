@@ -8,10 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="GloveApp.db" />
     <None Remove="GloveTest.db" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="GloveApp.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="GloveTest.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -19,6 +23,10 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GloveClasses\GloveClasses.csproj" />
   </ItemGroup>
 
   <ItemGroup>
