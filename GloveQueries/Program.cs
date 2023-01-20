@@ -47,6 +47,8 @@ namespace GloveDatabase
             DatabaseOperations.insertDiagnosis(new Diagnosis("Malestar General", "Dolor Agudo", 1));
             */
 
+            DatabaseOperations.insertPerson(new Person("Angel", "Hincho", "72190199", "02/12/2003", "933502139", "ahincho@unsa.edu.pe", "Paucarpata", 1));
+
         }
 
     }

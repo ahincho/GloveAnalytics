@@ -66,8 +66,13 @@ namespace GloveQueries
 
         public static void insertPerson(Person newPerson)
         {
+            
             sCon.Open();
-            string query = "INSERT INTO Persona(PerNombre, PerApellido)";
+            string query = "INSERT INTO Persona(" + Person.getFieldsWithCommas() + ") VALUES(" + newPerson.mergedWithCommas() + ");";
+            mCommand = new SQLiteCommand(query, sCon);
+            mCommand.ExecuteReader();
+            sCon.Close();
+
         }
 
     }
