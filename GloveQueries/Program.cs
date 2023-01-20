@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using GloveClasses;
+using GloveQueries;
 
 namespace GloveDatabase
 {
@@ -33,6 +34,17 @@ namespace GloveDatabase
             Console.WriteLine(h.mergedWithCommas());
             Session a = new Session(1, 1, "19/01/2023", 10.5f, 50.0f, 100, 3, h, 1);
             Console.WriteLine(a.mergedWithCommas());
+            */
+
+            // Now, we should initialize the Database with some default
+            // records or configurations in order to use the GloveApp
+            // Yup, Im doing some queries to test Database Operations
+
+            /*
+            DatabaseOperations.initializeDatabase();
+            DatabaseOperations.insertStatus(new Status("Eliminado", 1));
+            DatabaseOperations.insertSpecialism(new Specialism("Oftalmologia", 1));
+            DatabaseOperations.insertDiagnosis(new Diagnosis("Malestar General", "Dolor Agudo", 1));
             */
 
         }
