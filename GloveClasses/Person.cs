@@ -23,6 +23,7 @@ namespace GloveClasses
         private string Email;
         private string Address;
         private int CurrentStatus;
+        private static List<string> Fields = new List<string>() { "PerNombre", "PerApellido", "PerDni", "PerFechaNac", "PerTelefono", "PerCorreo", "PerDireccion", "PerEstado" };
         private List<string> DataSummary = new List<string>();
 
         // Class Constructors
@@ -44,43 +45,43 @@ namespace GloveClasses
         public void setName(string name)
         {
             this.Name = name;
-            this.DataSummary.Add(name.ToString());
+            this.DataSummary.Add("'" + name.ToString() + "'");
         }
 
         public void setLastname(string lastname)
         {
             this.Lastname = lastname;
-            this.DataSummary.Add(lastname.ToString());
+            this.DataSummary.Add("'" + lastname.ToString() + "'");
         }
 
         public void setDni(string dni)
         {
             this.Dni = dni;
-            this.DataSummary.Add(dni.ToString());
+            this.DataSummary.Add("'" +  dni.ToString() + "'");
         }
 
         public void setBirthday(string birthday)
         {
             this.Birthday = birthday;
-            this.DataSummary.Add(birthday.ToString());
+            this.DataSummary.Add("'" + birthday.ToString() + "'");
         }
 
         public void setPhoneNumber(string phoneNumber)
         {
             this.PhoneNumber = phoneNumber;
-            this.DataSummary.Add(phoneNumber.ToString());
+            this.DataSummary.Add("'" + phoneNumber.ToString() + "'");
         }
 
         public void setEmail(string email)
         {
             this.Email = email;
-            this.DataSummary.Add(email.ToString());
+            this.DataSummary.Add("'" + email.ToString() + "'");
         }
 
         public void setAddress(string address)
         {
             this.Address = address;
-            this.DataSummary.Add(address.ToString());
+            this.DataSummary.Add("'" + address.ToString() + "'");
         }
 
         public void setCurrentStatus(int currentStatus)
@@ -136,9 +137,22 @@ namespace GloveClasses
             return this.DataSummary;
         }
 
+        private static List<string> getFields()
+        {
+            return Person.Fields;
+        }
+
+        // Method to concatenate all the Class Fields. Useful when
+        // we need to do a query and need to enum the fields of the table
+
+        public static string getFieldsWithCommas()
+        {
+            return string.Join<Object>(",", getFields());
+        }
+
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
-        
+
         public string mergedWithCommas()
         {
             string merged = string.Join<Object>(", ", getDataSummary());
