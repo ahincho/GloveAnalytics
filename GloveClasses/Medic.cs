@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace GloveClasses
 {
-    
+
+    #pragma warning disable CS8618
     public class Medic
     {
 
@@ -76,6 +77,7 @@ namespace GloveClasses
         {
             return this.CurrentStatus;
         }
+
         private List<string> getDataSummary()
         {
             return this.DataSummary;

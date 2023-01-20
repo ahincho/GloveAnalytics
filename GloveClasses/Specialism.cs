@@ -11,7 +11,7 @@ namespace GloveClasses
     public class Specialism
     {
 
-        // Attributes of Status Class
+        // Attributes of Specialism Class
 
         private string Name;
         private int CurrentStatus;
