@@ -2,19 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using GloveInterfaces;
 
 namespace GloveClasses
 {
 
     #pragma warning disable CS8618
-    public class Session
+    public class Session : Recordable
     {
 
         // Attributes of Session Class
 
-        private int Id;
+        private static string Table = "Sesion";
         private int Patient;
         private string Date;
         private float Time;
@@ -23,13 +25,13 @@ namespace GloveClasses
         private int Fails;
         private HandAngles Angles;
         private int CurrentStatus;
+        private static List<string> Fields = new List<string>() { "SesPacienteId", "SesFecha", "SesTiempo", "SesMetros", "SesMonedas", "SesFallos", HandAngles.getClassFields(), "SesEstado"};
         private List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
-        public Session(int id, int patient, string date, float time, float meters, int coins, int fails, HandAngles angles, int currentStatus)
+        public Session(int patient, string date, float time, float meters, int coins, int fails, HandAngles angles, int currentStatus)
         {
-            setId(id);
             setPatient(patient);
             setDate(date);
             setTime(time);
@@ -42,12 +44,6 @@ namespace GloveClasses
 
         // Setters for Session Class
 
-        public void setId(int id)
-        {
-            this.Id = id;
-            this.DataSummary.Add(id.ToString());
-        }
-
         public void setPatient(int patient)
         {
             this.Patient = patient;
@@ -57,7 +53,7 @@ namespace GloveClasses
         public void setDate(string date)
         {
             this.Date = date;
-            this.DataSummary.Add(date.ToString());
+            this.DataSummary.Add("'" + date.ToString() + "'");
         }
 
         public void setTime(float time)
@@ -97,11 +93,6 @@ namespace GloveClasses
         }
 
         // Getters for Session Class
-
-        public int getId()
-        {
-            return this.Id;
-        }
 
         public int getPatient()
         {
@@ -146,6 +137,26 @@ namespace GloveClasses
         private List<string> getDataSummary()
         {
             return this.DataSummary;
+        }
+
+        private static List<string> getFields()
+        {
+            return Session.Fields;
+        }
+
+        // Method which returns the name of the table associated
+
+        public string getTableName()
+        {
+            return Session.Table;
+        }
+
+        // Method to concatenate all the Class Fields. Useful when
+        // we need to do a query and need to enum the fields of the table
+
+        public string getFieldsWithCommas()
+        {
+            return string.Join<Object>(",", getFields());
         }
 
         // Method to concatenate all the Class Data

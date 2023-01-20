@@ -4,21 +4,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GloveInterfaces;
 
 namespace GloveClasses
 {
     
     #pragma warning disable CS8618
-    public class Patient
+    public class Patient : Recordable
     {
 
         // Attributes of Patient Class
 
+        private static string Table = "Paciente";
         private int Id;
         private string AdmissionDate;
         private int Diagnosis;
         private string Comment;
         private int CurrentStatus;
+        private static List<string> Fields = new List<string>() { "PacId", "PacFechaIngreso", "PacDiagnostico", "PacObservaciones", "PacEstado" };
         private List<string> DataSummary = new List<string>();
 
         // Class Constructors
@@ -43,7 +46,7 @@ namespace GloveClasses
         public void setAdmissionDate(string admissionDate)
         {
             this.AdmissionDate = admissionDate;
-            this.DataSummary.Add(admissionDate.ToString());
+            this.DataSummary.Add("'" + admissionDate.ToString() + "'");
         }
 
         public void setDiagnosis(int diagnosis)
@@ -55,7 +58,7 @@ namespace GloveClasses
         public void setComment(string comment)
         {
             this.Comment = comment;
-            this.DataSummary.Add(comment.ToString());
+            this.DataSummary.Add("'" + comment.ToString() + "'");
         }
 
         public void setCurrentStatus(int currentStatus)
@@ -96,6 +99,26 @@ namespace GloveClasses
             return this.DataSummary;
         }
 
+        private static List<string> getFields()
+        {
+            return Patient.Fields;
+        }
+
+        // Method which returns the name of the table associated
+
+        public string getTableName()
+        {
+            return Patient.Table;
+        }
+
+        // Method to concatenate all the Class Fields. Useful when
+        // we need to do a query and need to enum the fields of the table
+
+        public string getFieldsWithCommas()
+        {
+            return string.Join<Object>(",", getFields());
+        }
+        
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
