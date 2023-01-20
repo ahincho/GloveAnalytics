@@ -20,34 +20,37 @@ namespace GloveDatabase
             // If you wanna try, just delete the comment annotation
 
             /*
-            Console.WriteLine("Class SQLite Connection");
-            MySQLiteConnection m = new MySQLiteConnection();
-            SQLiteConnection s = m.GetConnection();
-            m.CloseConnection();
-            */
+             * Console.WriteLine("Class SQLite Connection");
+             * MySQLiteConnection m = new MySQLiteConnection();
+             * SQLiteConnection s = m.GetConnection();
+             * m.CloseConnection();
+             */
 
             // Here we are testing the created Entities to manage the
             // objects or records that we need to save in the Database
 
             /*
-            HandAngles h = new HandAngles(0.25f, 0.25f, 0.25f, 0.25f, 0.25f);
-            Console.WriteLine(h.mergedWithCommas());
-            Session a = new Session(1, 1, "19/01/2023", 10.5f, 50.0f, 100, 3, h, 1);
-            Console.WriteLine(a.mergedWithCommas());
-            */
+             * HandAngles h = new HandAngles(0.25f, 0.25f, 0.25f, 0.25f, 0.25f);
+             * Console.WriteLine(h.mergedWithCommas());
+             * Session a = new Session(1, 1, "19/01/2023", 10.5f, 50.0f, 100, 3, h, 1);
+             * Console.WriteLine(a.mergedWithCommas());
+             */
 
             // Now, we should initialize the Database with some default
             // records or configurations in order to use the GloveApp
             // Yup, Im doing some queries to test Database Operations
 
             /*
-            DatabaseOperations.initializeDatabase();
-            DatabaseOperations.insertStatus(new Status("Eliminado", 1));
-            DatabaseOperations.insertSpecialism(new Specialism("Oftalmologia", 1));
-            DatabaseOperations.insertDiagnosis(new Diagnosis("Malestar General", "Dolor Agudo", 1));
-            */
-
-            DatabaseOperations.insertPerson(new Person("Angel", "Hincho", "72190199", "02/12/2003", "933502139", "ahincho@unsa.edu.pe", "Paucarpata", 1));
+             * DatabaseOperations.initializeDatabase();
+             * DatabaseOperations.insertRecord(new Status("Eliminado", 1));
+             * DatabaseOperations.insertRecord(new Specialism("Oftalmologia", 1));
+             * DatabaseOperations.insertRecord(new Diagnosis("Malestar General", "Dolor Agudo", 1));
+             * DatabaseOperations.insertRecord(new Person("Angel", "Hincho", "72190199", "02/12/2003", "933502139", "ahincho@unsa.edu.pe", "Paucarpata", 1));
+             * DatabaseOperations.insertRecord(new Medic(3, "20/01/2019", 2, 1));
+             * DatabaseOperations.insertRecord(new Patient(3, "20/01/2019", 5, "Cuidado Intensivo", 1));
+             * HandAngles angles = new HandAngles(0.25f, 0.25f, 0.25f, 0.25f, 0.25f);
+             * DatabaseOperations.insertRecord(new Session(3, "20/01/2019", 10.0f, 100.0f, 40, 5, angles, 1));
+             */
 
         }
 

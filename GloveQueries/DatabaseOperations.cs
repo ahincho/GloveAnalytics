@@ -1,5 +1,6 @@
 ﻿using GloveClasses;
 using GloveDatabase;
+using GloveInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -31,47 +32,19 @@ namespace GloveQueries
 
         }
 
-        public static void insertStatus(Status newStatus)
+        public static void insertRecord(Recordable newRecord)
         {
 
             sCon.Open();
-            string query = "INSERT INTO Estado(" + Status.getFieldsWithCommas() + ") VALUES(" + newStatus.mergedWithCommas() + ");";
+            string query = "INSERT INTO " + newRecord.getTableName() + "(" + newRecord.getFieldsWithCommas() + ") VALUES(" + newRecord.mergedWithCommas() + ");";
             mCommand = new SQLiteCommand(query, sCon);
             mCommand.ExecuteReader();
             sCon.Close();
 
         }
 
-        public static void insertSpecialism(Specialism newSpecialism)
+        public static void deleteRecord(int recordId)
         {
-
-            sCon.Open();
-            string query = "INSERT INTO Especialidad(" + Specialism.getFieldsWithCommas() + ") VALUES(" + newSpecialism.mergedWithCommas() + ");";
-            mCommand = new SQLiteCommand(query, sCon);
-            mCommand.ExecuteReader();
-            sCon.Close();
-
-        }
-
-        public static void insertDiagnosis(Diagnosis newDiagnosis)
-        {
-            
-            sCon.Open();
-            string query = "INSERT INTO Diagnostico(" + Diagnosis.getFieldsWithCommas() + ") VALUES(" + newDiagnosis.mergedWithCommas() + ");";
-            mCommand = new SQLiteCommand(query, sCon);
-            mCommand.ExecuteReader();
-            sCon.Close();
-
-        }
-
-        public static void insertPerson(Person newPerson)
-        {
-            
-            sCon.Open();
-            string query = "INSERT INTO Persona(" + Person.getFieldsWithCommas() + ") VALUES(" + newPerson.mergedWithCommas() + ");";
-            mCommand = new SQLiteCommand(query, sCon);
-            mCommand.ExecuteReader();
-            sCon.Close();
 
         }
 
