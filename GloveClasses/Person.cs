@@ -138,7 +138,7 @@ namespace GloveClasses
 
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
-
+        
         public string mergedWithCommas()
         {
             string merged = string.Join<Object>(", ", getDataSummary());
