@@ -15,6 +15,7 @@ namespace GloveClasses
 
         private string Name;
         private int CurrentStatus;
+        private static List<string> Fields = new List<string>() { "EstNombre", "EstRegistro" };
         private List<string> DataSummary = new List<string>();
 
         // Class Constructors
@@ -31,7 +32,7 @@ namespace GloveClasses
         public void setName(string name)
         {
             this.Name = name;
-            this.DataSummary.Add(name.ToString());
+            this.DataSummary.Add("'" + name.ToString() + "'");
         }
 
         public void setCurrentStatus(int currentStatus)
@@ -57,13 +58,22 @@ namespace GloveClasses
             return this.DataSummary;
         }
 
+        private static List<string> getFields()
+        {
+            return Status.Fields;
+        }
+
+        public static string getFieldsWithCommas()
+        {
+            return string.Join<Object>(",", getFields());
+        }
+
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
         public string mergedWithCommas()
         {
-            string merged = string.Join<Object>(", ", getDataSummary());
-            return merged;
+            return string.Join<Object>(", ", getDataSummary());
         }
 
     }
