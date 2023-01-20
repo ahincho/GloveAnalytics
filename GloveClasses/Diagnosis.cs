@@ -15,17 +15,16 @@ namespace GloveClasses
 
         // Attributes of Diagnosis Class
 
-        private int Id;
         private string Name;
         private string Description;
         private int CurrentStatus;
+        private static List<string> Fields = new List<string>() { "DiagNombre", "DiagDescripcion", "DiagEstado" };
         private List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
-        public Diagnosis(int id, string name, string description, int currentStatus)
+        public Diagnosis(string name, string description, int currentStatus)
         {
-            setId(id);
             setName(name);
             setDescription(description);
             setCurrentStatus(currentStatus);
@@ -33,22 +32,16 @@ namespace GloveClasses
 
         // Setters for Diagnosis Class
 
-        public void setId(int id)
-        {
-            this.Id = id;
-            this.DataSummary.Add(id.ToString());
-        }
-
         public void setName(string name)
         {
             this.Name = name;
-            this.DataSummary.Add(name.ToString());
+            this.DataSummary.Add("'" + name.ToString() + "'");
         }
 
         public void setDescription(string description)
         {
             this.Description = description;
-            this.DataSummary.Add(description.ToString());
+            this.DataSummary.Add("'" + description.ToString() + "'");
         }
 
         public void setCurrentStatus(int currentStatus)
@@ -58,11 +51,6 @@ namespace GloveClasses
         }
 
         // Setters for Diagnosis Class
-
-        public int getId()
-        {
-            return this.Id;
-        }
 
         public string getName()
         {
@@ -82,6 +70,19 @@ namespace GloveClasses
         private List<string> getDataSummary()
         {
             return this.DataSummary;
+        }
+
+        private static List<string> getFields()
+        {
+            return Diagnosis.Fields;
+        }
+
+        // Method to concatenate all the Class Fields. Useful when
+        // we need to do a query and need to enum the fields of the table
+
+        public static string getFieldsWithCommas()
+        {
+            return string.Join<Object>(",", getFields());
         }
 
         // Method to concatenate all the Class Data

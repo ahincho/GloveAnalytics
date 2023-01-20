@@ -63,6 +63,9 @@ namespace GloveClasses
             return Status.Fields;
         }
 
+        // Method to concatenate all the Class Fields. Useful when
+        // we need to do a query and need to enum the fields of the table
+
         public static string getFieldsWithCommas()
         {
             return string.Join<Object>(",", getFields());
