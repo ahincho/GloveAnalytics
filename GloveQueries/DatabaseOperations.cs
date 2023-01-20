@@ -43,7 +43,7 @@ namespace GloveQueries
 
         }
 
-        public static void deleteRecord(int recordId)
+        public static void deleteRecord(string table, int recordId)
         {
 
         }
