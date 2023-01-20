@@ -4,15 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GloveInterfaces;
 
 namespace GloveClasses
 {
    
-    public class Specialism
+    public class Specialism : Recordable
     {
 
         // Attributes of Specialism Class
 
+        private static string Table = "Especialidad";
         private string Name;
         private int CurrentStatus;
         private static List<string> Fields = new List<string>() { "EspNombre", "EspEstado" };
@@ -63,10 +65,17 @@ namespace GloveClasses
             return Specialism.Fields;
         }
 
+        // Method which returns the name of the table associated
+
+        public string getTableName()
+        {
+            return Specialism.Table;
+        }
+
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public static string getFieldsWithCommas()
+        public string getFieldsWithCommas()
         {
             return string.Join<Object>(",", getFields());
         }

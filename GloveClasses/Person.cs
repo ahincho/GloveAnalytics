@@ -5,16 +5,18 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GloveInterfaces;
 
 namespace GloveClasses
 {
 
     #pragma warning disable CS8618
-    public class Person
+    public class Person : Recordable
     {
 
         // Attributes of Person Class
 
+        private static string Table = "Persona";
         private string Name;
         private string Lastname;
         private string Dni;
@@ -137,6 +139,13 @@ namespace GloveClasses
             return this.DataSummary;
         }
 
+        // Method which returns the name of the table associated
+
+        public string getTableName()
+        {
+            return Person.Table;
+        }
+
         private static List<string> getFields()
         {
             return Person.Fields;
@@ -145,7 +154,7 @@ namespace GloveClasses
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public static string getFieldsWithCommas()
+        public string getFieldsWithCommas()
         {
             return string.Join<Object>(",", getFields());
         }

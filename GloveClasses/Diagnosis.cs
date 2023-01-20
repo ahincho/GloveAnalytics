@@ -5,16 +5,18 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GloveInterfaces;
 
 namespace GloveClasses
 {
 
     #pragma warning disable CS8618
-    public class Diagnosis
+    public class Diagnosis : Recordable
     {
 
         // Attributes of Diagnosis Class
 
+        private static string Table = "Diagnostico";
         private string Name;
         private string Description;
         private int CurrentStatus;
@@ -77,10 +79,18 @@ namespace GloveClasses
             return Diagnosis.Fields;
         }
 
+        // Method which returns the name of the table associated
+
+        public string getTableName()
+        {
+            return Diagnosis.Table;
+        }
+
+
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public static string getFieldsWithCommas()
+        public string getFieldsWithCommas()
         {
             return string.Join<Object>(",", getFields());
         }
