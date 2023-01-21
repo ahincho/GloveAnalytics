@@ -22,13 +22,15 @@ namespace GloveQueries
         public static void initializeDatabase()
         {
 
-            // Database have to contain the Active status
+            // Database have to contain the Active, Deleted and Playing Status
 
             sCon.Open();
-            string firstStatus = "INSERT INTO Estado VALUES(1, 'Activo', 1);";
-            mCommand = new SQLiteCommand(firstStatus, sCon);
+            string activeStatus = "INSERT INTO Estado VALUES(1, 'Activo', 1);";
+            mCommand = new SQLiteCommand(activeStatus, sCon);
             mCommand.ExecuteReader();
             sCon.Close();
+            insertRecord(new Status("Eliminado", 1));
+            insertRecord(new Status("Jugando", 1));
 
         }
 

@@ -42,7 +42,7 @@ namespace GloveDatabase
 
             /*
              * DatabaseOperations.initializeDatabase();
-             * DatabaseOperations.insertRecord(new Status("Eliminado", 1));
+             * DatabaseOperations.insertRecord(new Status("Oculto", 1));
              * DatabaseOperations.insertRecord(new Specialism("Oftalmologia", 1));
              * DatabaseOperations.insertRecord(new Diagnosis("Malestar General", "Dolor Agudo", 1));
              * DatabaseOperations.insertRecord(new Person("Angel", "Hincho", "72190199", "02/12/2003", "933502139", "ahincho@unsa.edu.pe", "Paucarpata", 1));
