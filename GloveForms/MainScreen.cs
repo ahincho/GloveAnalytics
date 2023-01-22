@@ -22,5 +22,26 @@ namespace GloveForms
         {
 
         }
+
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OptionsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreditsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
