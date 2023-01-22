@@ -16,7 +16,7 @@ namespace GloveForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PatientSignUp());
+            Application.Run(new MainScreen());
         }
     }
 }

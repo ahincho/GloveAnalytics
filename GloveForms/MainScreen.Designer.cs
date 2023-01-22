@@ -44,7 +44,7 @@
             // PlayButton
             // 
             this.PlayButton.BackColor = System.Drawing.Color.Transparent;
-            this.PlayButton.BackgroundImage = global::GloveForms.Properties.Resources.GlovePlay;
+            this.PlayButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PlayButton.BackgroundImage")));
             this.PlayButton.FlatAppearance.BorderSize = 0;
             this.PlayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayButton.Location = new System.Drawing.Point(460, 230);
@@ -52,43 +52,56 @@
             this.PlayButton.Name = "PlayButton";
             this.PlayButton.Size = new System.Drawing.Size(360, 85);
             this.PlayButton.TabIndex = 0;
-            this.PlayButton.Text = "Play";
             this.PlayButton.UseVisualStyleBackColor = false;
             this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
             // SignUpButton
             // 
+            this.SignUpButton.BackColor = System.Drawing.Color.Transparent;
+            this.SignUpButton.BackgroundImage = global::GloveForms.Properties.Resources.SignUpButton;
+            this.SignUpButton.FlatAppearance.BorderSize = 0;
+            this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButton.Location = new System.Drawing.Point(460, 330);
+            this.SignUpButton.Margin = new System.Windows.Forms.Padding(0);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.Size = new System.Drawing.Size(360, 85);
             this.SignUpButton.TabIndex = 1;
-            this.SignUpButton.Text = "Sign Up";
-            this.SignUpButton.UseVisualStyleBackColor = true;
+            this.SignUpButton.UseVisualStyleBackColor = false;
             this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // OptionsButton
             // 
+            this.OptionsButton.BackColor = System.Drawing.Color.Transparent;
+            this.OptionsButton.BackgroundImage = global::GloveForms.Properties.Resources.OptionsButton;
+            this.OptionsButton.FlatAppearance.BorderSize = 0;
+            this.OptionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OptionsButton.Location = new System.Drawing.Point(460, 430);
+            this.OptionsButton.Margin = new System.Windows.Forms.Padding(0);
             this.OptionsButton.Name = "OptionsButton";
             this.OptionsButton.Size = new System.Drawing.Size(360, 85);
             this.OptionsButton.TabIndex = 2;
-            this.OptionsButton.Text = "Options";
-            this.OptionsButton.UseVisualStyleBackColor = true;
+            this.OptionsButton.UseVisualStyleBackColor = false;
             this.OptionsButton.Click += new System.EventHandler(this.OptionsButton_Click);
             // 
             // CreditsButton
             // 
+            this.CreditsButton.BackColor = System.Drawing.Color.Transparent;
+            this.CreditsButton.BackgroundImage = global::GloveForms.Properties.Resources.CreditsButton;
+            this.CreditsButton.FlatAppearance.BorderSize = 0;
+            this.CreditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreditsButton.Location = new System.Drawing.Point(460, 530);
             this.CreditsButton.Name = "CreditsButton";
             this.CreditsButton.Size = new System.Drawing.Size(360, 85);
             this.CreditsButton.TabIndex = 3;
-            this.CreditsButton.Text = "Credits";
-            this.CreditsButton.UseVisualStyleBackColor = true;
+            this.CreditsButton.UseVisualStyleBackColor = false;
             this.CreditsButton.Click += new System.EventHandler(this.CreditsButton_Click);
             // 
             // GameTitle
             // 
+            this.GameTitle.BackColor = System.Drawing.Color.Transparent;
+            this.GameTitle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GameTitle.BackgroundImage")));
             this.GameTitle.Location = new System.Drawing.Point(340, 25);
+            this.GameTitle.Margin = new System.Windows.Forms.Padding(0);
             this.GameTitle.Name = "GameTitle";
             this.GameTitle.Size = new System.Drawing.Size(600, 180);
             this.GameTitle.TabIndex = 4;
@@ -96,7 +109,10 @@
             // 
             // LeftMenu
             // 
+            this.LeftMenu.BackColor = System.Drawing.Color.Transparent;
+            this.LeftMenu.BackgroundImage = global::GloveForms.Properties.Resources.LeftMenuHolder;
             this.LeftMenu.Location = new System.Drawing.Point(0, 245);
+            this.LeftMenu.Margin = new System.Windows.Forms.Padding(0);
             this.LeftMenu.Name = "LeftMenu";
             this.LeftMenu.Size = new System.Drawing.Size(125, 360);
             this.LeftMenu.TabIndex = 5;
@@ -104,7 +120,10 @@
             // 
             // RightMenu
             // 
+            this.RightMenu.BackColor = System.Drawing.Color.Transparent;
+            this.RightMenu.Image = global::GloveForms.Properties.Resources.RightMenuHolder;
             this.RightMenu.Location = new System.Drawing.Point(1155, 245);
+            this.RightMenu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.RightMenu.Name = "RightMenu";
             this.RightMenu.Size = new System.Drawing.Size(125, 360);
             this.RightMenu.TabIndex = 6;
