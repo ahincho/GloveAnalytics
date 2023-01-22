@@ -31,9 +31,10 @@ namespace GloveForms
             string admissionDate = AdmissionTextBox.Text;
 
             // Person newPerson = new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
+
             // DatabaseOperations.insertRecord(newPerson);
 
-            Console.WriteLine();
+            Console.WriteLine(name);
 
         }
 
