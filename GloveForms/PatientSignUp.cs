@@ -13,6 +13,7 @@ namespace GloveForms
 {
     public partial class PatientSignUp : Form
     {
+        
         public PatientSignUp()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace GloveForms
         private void SaveRecordButton_Click(object sender, EventArgs e)
         {
             
+            /*
             string name = NameTextBox.Text;
             string lastname = LastnameTextBox.Text;
             string document = DocumentTextBox.Text;
@@ -29,12 +31,18 @@ namespace GloveForms
             string email = EmailTextBox.Text;
             string address = AddressTextBox.Text;
             string admissionDate = AdmissionTextBox.Text;
-
+            
             // Person newPerson = new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
 
             // DatabaseOperations.insertRecord(newPerson);
 
             Console.WriteLine(name);
+            */
+
+        }
+
+        private void PatientSignUp_Load(object sender, EventArgs e)
+        {
 
         }
 

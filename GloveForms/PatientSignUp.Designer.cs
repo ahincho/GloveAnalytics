@@ -30,16 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientSignUp));
             this.FormTitle = new System.Windows.Forms.PictureBox();
-            this.CommentBox = new System.Windows.Forms.TextBox();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.LastnameTextBox = new System.Windows.Forms.TextBox();
-            this.DocumentTextBox = new System.Windows.Forms.TextBox();
-            this.BirthdayTextBox = new System.Windows.Forms.TextBox();
-            this.PhoneTextBox = new System.Windows.Forms.TextBox();
-            this.EmailTextBox = new System.Windows.Forms.TextBox();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
-            this.DiagnosisTextBox = new System.Windows.Forms.TextBox();
-            this.AdmissionTextBox = new System.Windows.Forms.TextBox();
             this.SaveRecordButton = new System.Windows.Forms.Button();
             this.CommentLabel = new System.Windows.Forms.PictureBox();
             this.DiagnosisLabel = new System.Windows.Forms.PictureBox();
@@ -52,6 +42,16 @@
             this.NameLabel = new System.Windows.Forms.PictureBox();
             this.AdmissionLabel = new System.Windows.Forms.PictureBox();
             this.PatientFields = new System.Windows.Forms.Panel();
+            this.CommentBox = new System.Windows.Forms.TextBox();
+            this.DiagnosisTextBox = new System.Windows.Forms.TextBox();
+            this.AdmissionTextBox = new System.Windows.Forms.TextBox();
+            this.AddressTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneTextBox = new System.Windows.Forms.TextBox();
+            this.BirthdayTextBox = new System.Windows.Forms.TextBox();
+            this.DocumentTextBox = new System.Windows.Forms.TextBox();
+            this.LastnameTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.FormTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiagnosisLabel)).BeginInit();
@@ -76,111 +76,6 @@
             this.FormTitle.Size = new System.Drawing.Size(656, 76);
             this.FormTitle.TabIndex = 0;
             this.FormTitle.TabStop = false;
-            // 
-            // CommentBox
-            // 
-            this.CommentBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.CommentBox.Location = new System.Drawing.Point(560, 225);
-            this.CommentBox.Margin = new System.Windows.Forms.Padding(0);
-            this.CommentBox.Multiline = true;
-            this.CommentBox.Name = "CommentBox";
-            this.CommentBox.Size = new System.Drawing.Size(590, 240);
-            this.CommentBox.TabIndex = 9;
-            this.CommentBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // NameTextBox
-            // 
-            this.NameTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.NameTextBox.Location = new System.Drawing.Point(180, 30);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(360, 48);
-            this.NameTextBox.TabIndex = 0;
-            this.NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LastnameTextBox
-            // 
-            this.LastnameTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.LastnameTextBox.Location = new System.Drawing.Point(256, 95);
-            this.LastnameTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.LastnameTextBox.Name = "LastnameTextBox";
-            this.LastnameTextBox.Size = new System.Drawing.Size(285, 48);
-            this.LastnameTextBox.TabIndex = 1;
-            this.LastnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // DocumentTextBox
-            // 
-            this.DocumentTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.DocumentTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.DocumentTextBox.Location = new System.Drawing.Point(306, 160);
-            this.DocumentTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.DocumentTextBox.Name = "DocumentTextBox";
-            this.DocumentTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DocumentTextBox.Size = new System.Drawing.Size(235, 48);
-            this.DocumentTextBox.TabIndex = 2;
-            this.DocumentTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BirthdayTextBox
-            // 
-            this.BirthdayTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.BirthdayTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.BirthdayTextBox.Location = new System.Drawing.Point(222, 225);
-            this.BirthdayTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.BirthdayTextBox.Name = "BirthdayTextBox";
-            this.BirthdayTextBox.Size = new System.Drawing.Size(320, 48);
-            this.BirthdayTextBox.TabIndex = 3;
-            this.BirthdayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // PhoneTextBox
-            // 
-            this.PhoneTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.PhoneTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.PhoneTextBox.Location = new System.Drawing.Point(341, 290);
-            this.PhoneTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.PhoneTextBox.Name = "PhoneTextBox";
-            this.PhoneTextBox.Size = new System.Drawing.Size(200, 48);
-            this.PhoneTextBox.TabIndex = 4;
-            this.PhoneTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // EmailTextBox
-            // 
-            this.EmailTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.EmailTextBox.Location = new System.Drawing.Point(171, 355);
-            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(370, 48);
-            this.EmailTextBox.TabIndex = 5;
-            this.EmailTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.AddressTextBox.Location = new System.Drawing.Point(221, 420);
-            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(320, 48);
-            this.AddressTextBox.TabIndex = 6;
-            this.AddressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // DiagnosisTextBox
-            // 
-            this.DiagnosisTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.DiagnosisTextBox.Location = new System.Drawing.Point(780, 95);
-            this.DiagnosisTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.DiagnosisTextBox.Name = "DiagnosisTextBox";
-            this.DiagnosisTextBox.Size = new System.Drawing.Size(370, 48);
-            this.DiagnosisTextBox.TabIndex = 8;
-            this.DiagnosisTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // AdmissionTextBox
-            // 
-            this.AdmissionTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
-            this.AdmissionTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.AdmissionTextBox.Location = new System.Drawing.Point(880, 30);
-            this.AdmissionTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.AdmissionTextBox.Name = "AdmissionTextBox";
-            this.AdmissionTextBox.Size = new System.Drawing.Size(270, 48);
-            this.AdmissionTextBox.TabIndex = 7;
-            this.AdmissionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SaveRecordButton
             // 
@@ -338,17 +233,126 @@
             this.PatientFields.Size = new System.Drawing.Size(1180, 560);
             this.PatientFields.TabIndex = 22;
             // 
+            // CommentBox
+            // 
+            this.CommentBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.CommentBox.Location = new System.Drawing.Point(560, 225);
+            this.CommentBox.Margin = new System.Windows.Forms.Padding(0);
+            this.CommentBox.Multiline = true;
+            this.CommentBox.Name = "CommentBox";
+            this.CommentBox.Size = new System.Drawing.Size(590, 240);
+            this.CommentBox.TabIndex = 9;
+            this.CommentBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // DiagnosisTextBox
+            // 
+            this.DiagnosisTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.DiagnosisTextBox.Location = new System.Drawing.Point(780, 95);
+            this.DiagnosisTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.DiagnosisTextBox.Name = "DiagnosisTextBox";
+            this.DiagnosisTextBox.Size = new System.Drawing.Size(370, 48);
+            this.DiagnosisTextBox.TabIndex = 8;
+            this.DiagnosisTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // AdmissionTextBox
+            // 
+            this.AdmissionTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.AdmissionTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.AdmissionTextBox.Location = new System.Drawing.Point(880, 30);
+            this.AdmissionTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.AdmissionTextBox.Name = "AdmissionTextBox";
+            this.AdmissionTextBox.Size = new System.Drawing.Size(270, 48);
+            this.AdmissionTextBox.TabIndex = 7;
+            this.AdmissionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // AddressTextBox
+            // 
+            this.AddressTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.AddressTextBox.Location = new System.Drawing.Point(221, 420);
+            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.AddressTextBox.Name = "AddressTextBox";
+            this.AddressTextBox.Size = new System.Drawing.Size(320, 48);
+            this.AddressTextBox.TabIndex = 6;
+            this.AddressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.EmailTextBox.Location = new System.Drawing.Point(171, 355);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(370, 48);
+            this.EmailTextBox.TabIndex = 5;
+            this.EmailTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // PhoneTextBox
+            // 
+            this.PhoneTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.PhoneTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.PhoneTextBox.Location = new System.Drawing.Point(341, 290);
+            this.PhoneTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.PhoneTextBox.Name = "PhoneTextBox";
+            this.PhoneTextBox.Size = new System.Drawing.Size(200, 48);
+            this.PhoneTextBox.TabIndex = 4;
+            this.PhoneTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // BirthdayTextBox
+            // 
+            this.BirthdayTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.BirthdayTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.BirthdayTextBox.Location = new System.Drawing.Point(222, 225);
+            this.BirthdayTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.BirthdayTextBox.Name = "BirthdayTextBox";
+            this.BirthdayTextBox.Size = new System.Drawing.Size(320, 48);
+            this.BirthdayTextBox.TabIndex = 3;
+            this.BirthdayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // DocumentTextBox
+            // 
+            this.DocumentTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.DocumentTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.DocumentTextBox.Location = new System.Drawing.Point(306, 160);
+            this.DocumentTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.DocumentTextBox.Name = "DocumentTextBox";
+            this.DocumentTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DocumentTextBox.Size = new System.Drawing.Size(235, 48);
+            this.DocumentTextBox.TabIndex = 2;
+            this.DocumentTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LastnameTextBox
+            // 
+            this.LastnameTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.LastnameTextBox.Location = new System.Drawing.Point(256, 95);
+            this.LastnameTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.LastnameTextBox.Name = "LastnameTextBox";
+            this.LastnameTextBox.Size = new System.Drawing.Size(285, 48);
+            this.LastnameTextBox.TabIndex = 1;
+            this.LastnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Font = new System.Drawing.Font("Agent Orange", 18F, System.Drawing.FontStyle.Bold);
+            this.NameTextBox.Location = new System.Drawing.Point(180, 30);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(360, 48);
+            this.NameTextBox.TabIndex = 0;
+            this.NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // PatientSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::GloveForms.Properties.Resources.GloveBackground;
             this.ClientSize = new System.Drawing.Size(1264, 721);
             this.Controls.Add(this.FormTitle);
             this.Controls.Add(this.PatientFields);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PatientSignUp";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "CITESOFT - GloveApp (Patient Form)";
+            this.Load += new System.EventHandler(this.PatientSignUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FormTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiagnosisLabel)).EndInit();
@@ -369,16 +373,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox FormTitle;
-        private System.Windows.Forms.TextBox CommentBox;
-        private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox LastnameTextBox;
-        private System.Windows.Forms.TextBox DocumentTextBox;
-        private System.Windows.Forms.TextBox BirthdayTextBox;
-        private System.Windows.Forms.TextBox PhoneTextBox;
-        private System.Windows.Forms.TextBox EmailTextBox;
-        private System.Windows.Forms.TextBox AddressTextBox;
-        private System.Windows.Forms.TextBox DiagnosisTextBox;
-        private System.Windows.Forms.TextBox AdmissionTextBox;
         private System.Windows.Forms.Button SaveRecordButton;
         private System.Windows.Forms.PictureBox CommentLabel;
         private System.Windows.Forms.PictureBox DiagnosisLabel;
@@ -391,5 +385,15 @@
         private System.Windows.Forms.PictureBox NameLabel;
         private System.Windows.Forms.PictureBox AdmissionLabel;
         private System.Windows.Forms.Panel PatientFields;
+        private System.Windows.Forms.TextBox CommentBox;
+        private System.Windows.Forms.TextBox DiagnosisTextBox;
+        private System.Windows.Forms.TextBox AdmissionTextBox;
+        private System.Windows.Forms.TextBox AddressTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.TextBox PhoneTextBox;
+        private System.Windows.Forms.TextBox BirthdayTextBox;
+        private System.Windows.Forms.TextBox DocumentTextBox;
+        private System.Windows.Forms.TextBox LastnameTextBox;
+        private System.Windows.Forms.TextBox NameTextBox;
     }
 }

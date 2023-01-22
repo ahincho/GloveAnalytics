@@ -103,16 +103,6 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CreditsButton {
-            get {
-                object obj = ResourceManager.GetObject("CreditsButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap DiagnosisButton {
             get {
                 object obj = ResourceManager.GetObject("DiagnosisButton", resourceCulture);
@@ -143,16 +133,6 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GameTitle {
-            get {
-                object obj = ResourceManager.GetObject("GameTitle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap GloveBackground {
             get {
                 object obj = ResourceManager.GetObject("GloveBackground", resourceCulture);
@@ -173,9 +153,9 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LeftMenuHolder {
+        internal static System.Drawing.Bitmap MainScreenBackground {
             get {
-                object obj = ResourceManager.GetObject("LeftMenuHolder", resourceCulture);
+                object obj = ResourceManager.GetObject("MainScreenBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,16 +166,6 @@ namespace GloveForms.Properties {
         internal static System.Drawing.Bitmap NameButton {
             get {
                 object obj = ResourceManager.GetObject("NameButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap OptionsButton {
-            get {
-                object obj = ResourceManager.GetObject("OptionsButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,39 +203,9 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PlayButton {
-            get {
-                object obj = ResourceManager.GetObject("PlayButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap RightMenuHolder {
-            get {
-                object obj = ResourceManager.GetObject("RightMenuHolder", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap SaveRecordButton {
             get {
                 object obj = ResourceManager.GetObject("SaveRecordButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap SignUpButton {
-            get {
-                object obj = ResourceManager.GetObject("SignUpButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
