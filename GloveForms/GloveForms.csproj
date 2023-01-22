@@ -113,5 +113,44 @@
   <ItemGroup>
     <None Include="Resources\LeftMenuHolder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PatientSignUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NameButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LastnameButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirthdayButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhoneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmailButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddressButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdmissionDateButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiagnosisButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CommentButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlaceholderPatientForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveRecordButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

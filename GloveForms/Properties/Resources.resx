@@ -118,28 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PlaceholderPatientForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlaceholderPatientForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocumentButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocumentButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PhoneButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PhoneButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiagnosisButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DiagnosisButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PatientSignUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PatientSignUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PlayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SignUpButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SignUpButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LastnameButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LastnameButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CreditsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CreditsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GameTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RightMenuHolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RightMenuHolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GloveBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GloveBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BirthdayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BirthdayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OptionsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OptionsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LeftMenuHolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LeftMenuHolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloveBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloveBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmailButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EmailButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommentButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CommentButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightMenuHolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightMenuHolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdmissionDateButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdmissionDateButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SignUpButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SignUpButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddressButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddressButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NameButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NameButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveRecordButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveRecordButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

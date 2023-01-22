@@ -123,7 +123,7 @@
             this.RightMenu.BackColor = System.Drawing.Color.Transparent;
             this.RightMenu.Image = global::GloveForms.Properties.Resources.RightMenuHolder;
             this.RightMenu.Location = new System.Drawing.Point(1155, 245);
-            this.RightMenu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.RightMenu.Margin = new System.Windows.Forms.Padding(0);
             this.RightMenu.Name = "RightMenu";
             this.RightMenu.Size = new System.Drawing.Size(125, 360);
             this.RightMenu.TabIndex = 6;
@@ -135,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::GloveForms.Properties.Resources.GloveBackground;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 721);
             this.Controls.Add(this.RightMenu);
             this.Controls.Add(this.LeftMenu);
             this.Controls.Add(this.GameTitle);
