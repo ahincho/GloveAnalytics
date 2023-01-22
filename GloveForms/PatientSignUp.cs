@@ -17,7 +17,7 @@ namespace GloveForms
             InitializeComponent();
         }
 
-        private void CommentTextBox_TextChanged(object sender, EventArgs e)
+        private void SaveRecordButton_Click(object sender, EventArgs e)
         {
 
         }
