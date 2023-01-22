@@ -11,6 +11,7 @@ namespace GloveDatabase
     class MySQLiteConnection
     {
         
+        // You need to change this argument due the SQLite Database is an archive!
         private string Source = "D:/Proyectos Visual Studio/GloveAnalytics/GloveQueries/GloveTest.db";
         private SQLiteConnection? Instance = null;
 
