@@ -30,8 +30,13 @@ namespace GloveForms
                 }
                 else
                 {
+                    // Here we can merge the forms or GUI with the videogame!
                     MessageBox.Show(Convert.ToString(documentId));
                 }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese su documento", "Ingresar Documento!", MessageBoxButtons.OK);
             }
 
         }
