@@ -12,7 +12,7 @@ namespace GloveQueries
 {
 
     #pragma warning disable CS8618
-    class DatabaseOperations
+    public class DatabaseOperations
     {
 
         private static MySQLiteConnection mSql = new MySQLiteConnection();
