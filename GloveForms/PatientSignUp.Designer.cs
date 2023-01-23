@@ -212,7 +212,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PatientSignUp";
-            this.Text = "CITESOFT - GloveApp (Patient Form)";
+            this.Text = "CITESOFT - GloveApp (Patient Sign Up)";
             this.Load += new System.EventHandler(this.PatientSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

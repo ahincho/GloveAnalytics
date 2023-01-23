@@ -1,4 +1,6 @@
 
+using Microsoft.VisualBasic;
+
 namespace GloveForms
 {
     public partial class MainScreen : Form
@@ -18,6 +20,14 @@ namespace GloveForms
             this.Hide();
             patientForm.ShowDialog();
             this.Show();
+
+        }
+
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
+
+            int document = int.Parse(Interaction.InputBox("Ingrese su DNI: ", "Iniciar Sesión", "123456789"));
+            MessageBox.Show(("Documento: " + document), "Documento Ingresado!", MessageBoxButtons.OK);
 
         }
 

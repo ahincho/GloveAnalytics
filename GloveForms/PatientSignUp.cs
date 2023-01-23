@@ -34,7 +34,7 @@ namespace GloveForms
             
             if (this.FieldsAreEmpty())
             {
-                MessageBox.Show("Debe completar la información solicitada!", "Tiene campos en blanco!");
+                MessageBox.Show("Debe completar la información solicitada!", "Tiene campos en blanco!", MessageBoxButtons.OK);
             }
             else
             {
@@ -56,7 +56,7 @@ namespace GloveForms
                 Patient aPatient = new Patient(personId, admissionDate, diagnosis, comment, 1);
                 DatabaseOperations.insertRecord(aPatient);
                 // MessageBox.Show(aPatient.mergedWithCommas());
-                MessageBox.Show("Se ha registrado un nuevo paciente!", "Paciente Registrado!");
+                MessageBox.Show("Se ha registrado un nuevo paciente!", "Paciente Registrado!", MessageBoxButtons.OK);
                 this.CleanFields();
             }
 

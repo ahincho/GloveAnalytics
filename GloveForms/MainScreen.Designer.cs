@@ -47,6 +47,7 @@
             this.PlayButton.Size = new System.Drawing.Size(360, 85);
             this.PlayButton.TabIndex = 0;
             this.PlayButton.UseVisualStyleBackColor = false;
+            this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
             // SignUpButton
             // 
