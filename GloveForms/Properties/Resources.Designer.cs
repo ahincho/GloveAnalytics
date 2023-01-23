@@ -63,6 +63,16 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GetDocumentBackground {
+            get {
+                object obj = ResourceManager.GetObject("GetDocumentBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MainScreenBackground {
             get {
                 object obj = ResourceManager.GetObject("MainScreenBackground", resourceCulture);

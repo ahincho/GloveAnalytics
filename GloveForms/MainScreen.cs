@@ -26,8 +26,12 @@ namespace GloveForms
         private void PlayButton_Click(object sender, EventArgs e)
         {
 
-            int document = int.Parse(Interaction.InputBox("Ingrese su DNI: ", "Iniciar Sesión", "123456789"));
-            MessageBox.Show(("Documento: " + document), "Documento Ingresado!", MessageBoxButtons.OK);
+            GetDocument documentForm = new GetDocument();
+            documentForm.Dock = DockStyle.Fill;
+            documentForm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
+            documentForm.ShowDialog();
+            this.Show();
 
         }
 
