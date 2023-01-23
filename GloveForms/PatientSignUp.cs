@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,11 @@ namespace GloveForms
         }
 
         private void PatientSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveRecordButton_Click(object sender, EventArgs e)
         {
 
         }
