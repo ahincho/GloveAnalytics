@@ -32,7 +32,7 @@ namespace GloveForms
 
         private void SaveRecordButton_Click(object sender, EventArgs e)
         {
-
+            
             string name = this.NameTextBox.Text;
             string lastname = this.LastnameTextBox.Text;
             string document = this.DocumentTextBox.Text;
@@ -45,12 +45,12 @@ namespace GloveForms
             string comment = this.CommentTextBox.Text;
 
             Person aPerson = new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
-            // DatabaseOperations.insertRecord(aPerson);
-            MessageBox.Show(aPerson.mergedWithCommas());
+            DatabaseOperations.insertRecord(aPerson);
+            // MessageBox.Show(aPerson.mergedWithCommas());
             int personId = DatabaseOperations.recoverPersonID(document);
             Patient aPatient = new Patient(personId, admissionDate, diagnosis, comment, 1);
-            MessageBox.Show(aPatient.mergedWithCommas());
-            // DatabaseOperations.insertRecord(aPatient);
+            DatabaseOperations.insertRecord(aPatient);
+            // MessageBox.Show(aPatient.mergedWithCommas());
             this.CleanFields();
 
         }

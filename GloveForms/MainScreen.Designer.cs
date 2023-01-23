@@ -38,10 +38,11 @@
             // PlayButton
             // 
             this.PlayButton.BackColor = System.Drawing.Color.Transparent;
+            this.PlayButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlayButton.FlatAppearance.BorderSize = 0;
             this.PlayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayButton.Location = new System.Drawing.Point(460, 230);
-            this.PlayButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.PlayButton.Margin = new System.Windows.Forms.Padding(0);
             this.PlayButton.Name = "PlayButton";
             this.PlayButton.Size = new System.Drawing.Size(360, 85);
             this.PlayButton.TabIndex = 0;
@@ -50,10 +51,11 @@
             // SignUpButton
             // 
             this.SignUpButton.BackColor = System.Drawing.Color.Transparent;
+            this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUpButton.FlatAppearance.BorderSize = 0;
             this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButton.Location = new System.Drawing.Point(460, 330);
-            this.SignUpButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.SignUpButton.Margin = new System.Windows.Forms.Padding(0);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.Size = new System.Drawing.Size(360, 85);
             this.SignUpButton.TabIndex = 1;
@@ -63,10 +65,11 @@
             // OptionsButton
             // 
             this.OptionsButton.BackColor = System.Drawing.Color.Transparent;
+            this.OptionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OptionsButton.FlatAppearance.BorderSize = 0;
             this.OptionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OptionsButton.Location = new System.Drawing.Point(460, 430);
-            this.OptionsButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.OptionsButton.Margin = new System.Windows.Forms.Padding(0);
             this.OptionsButton.Name = "OptionsButton";
             this.OptionsButton.Size = new System.Drawing.Size(360, 85);
             this.OptionsButton.TabIndex = 2;
@@ -75,10 +78,11 @@
             // CreditsButton
             // 
             this.CreditsButton.BackColor = System.Drawing.Color.Transparent;
+            this.CreditsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreditsButton.FlatAppearance.BorderSize = 0;
             this.CreditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreditsButton.Location = new System.Drawing.Point(460, 530);
-            this.CreditsButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.CreditsButton.Margin = new System.Windows.Forms.Padding(0);
             this.CreditsButton.Name = "CreditsButton";
             this.CreditsButton.Size = new System.Drawing.Size(360, 85);
             this.CreditsButton.TabIndex = 3;

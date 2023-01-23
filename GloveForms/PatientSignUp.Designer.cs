@@ -6,6 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private List<System.Windows.Forms.TextBox> MyTextBoxGroup = new List<System.Windows.Forms.TextBox>();
 
         /// <summary>
         /// Clean up any resources being used.
@@ -40,12 +41,12 @@
             this.DiagnosisTextBox = new System.Windows.Forms.TextBox();
             this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.SaveRecordButton = new System.Windows.Forms.Button();
-            PatientSignUp.MyTextBoxGroup = new List<System.Windows.Forms.TextBox>();
             this.SuspendLayout();
             // 
             // NameTextBox
             // 
             this.NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NameTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NameTextBox.Location = new System.Drawing.Point(256, 158);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -57,6 +58,7 @@
             // LastnameTextBox
             // 
             this.LastnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LastnameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.LastnameTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LastnameTextBox.Location = new System.Drawing.Point(323, 223);
             this.LastnameTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -68,6 +70,7 @@
             // DocumentTextBox
             // 
             this.DocumentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DocumentTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DocumentTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DocumentTextBox.Location = new System.Drawing.Point(372, 288);
             this.DocumentTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -79,6 +82,7 @@
             // BirthdayTextBox
             // 
             this.BirthdayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BirthdayTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.BirthdayTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BirthdayTextBox.Location = new System.Drawing.Point(293, 353);
             this.BirthdayTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -90,6 +94,7 @@
             // PhoneTextBox
             // 
             this.PhoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PhoneTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PhoneTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PhoneTextBox.Location = new System.Drawing.Point(407, 418);
             this.PhoneTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -101,6 +106,7 @@
             // EmailTextBox
             // 
             this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.EmailTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EmailTextBox.Location = new System.Drawing.Point(246, 484);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -112,6 +118,7 @@
             // AddressTextBox
             // 
             this.AddressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.AddressTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddressTextBox.Location = new System.Drawing.Point(293, 549);
             this.AddressTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -123,6 +130,7 @@
             // AdmissionTextBox
             // 
             this.AdmissionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AdmissionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.AdmissionTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmissionTextBox.Location = new System.Drawing.Point(950, 158);
             this.AdmissionTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -134,6 +142,7 @@
             // DiagnosisTextBox
             // 
             this.DiagnosisTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DiagnosisTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DiagnosisTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DiagnosisTextBox.Location = new System.Drawing.Point(855, 223);
             this.DiagnosisTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -145,6 +154,7 @@
             // CommentTextBox
             // 
             this.CommentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CommentTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.CommentTextBox.Font = new System.Drawing.Font("Agent Orange", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CommentTextBox.Location = new System.Drawing.Point(640, 362);
             this.CommentTextBox.Margin = new System.Windows.Forms.Padding(0);
@@ -157,6 +167,7 @@
             // SaveRecordButton
             // 
             this.SaveRecordButton.BackColor = System.Drawing.Color.Transparent;
+            this.SaveRecordButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveRecordButton.FlatAppearance.BorderSize = 0;
             this.SaveRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveRecordButton.Location = new System.Drawing.Point(510, 605);
@@ -165,6 +176,19 @@
             this.SaveRecordButton.TabIndex = 10;
             this.SaveRecordButton.UseVisualStyleBackColor = false;
             this.SaveRecordButton.Click += new System.EventHandler(this.SaveRecordButton_Click);
+            //
+            // MyTextBoxGroup
+            //
+            this.MyTextBoxGroup.Add(this.NameTextBox);
+            this.MyTextBoxGroup.Add(this.LastnameTextBox);
+            this.MyTextBoxGroup.Add(this.DocumentTextBox);
+            this.MyTextBoxGroup.Add(this.BirthdayTextBox);
+            this.MyTextBoxGroup.Add(this.PhoneTextBox);
+            this.MyTextBoxGroup.Add(this.EmailTextBox);
+            this.MyTextBoxGroup.Add(this.AddressTextBox);
+            this.MyTextBoxGroup.Add(this.AdmissionTextBox);
+            this.MyTextBoxGroup.Add(this.DiagnosisTextBox);
+            this.MyTextBoxGroup.Add(this.CommentTextBox);
             // 
             // PatientSignUp
             // 
@@ -189,19 +213,7 @@
             this.Load += new System.EventHandler(this.PatientSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-            //
-            // MyTextBoxGroup
-            // 
-            PatientSignUp.MyTextBoxGroup.Add(NameTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(LastnameTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(DocumentTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(BirthdayTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(PhoneTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(EmailTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(AddressTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(AdmissionTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(DiagnosisTextBox);
-            PatientSignUp.MyTextBoxGroup.Add(CommentTextBox);
+
         }
 
         #endregion
@@ -217,6 +229,5 @@
         private TextBox DiagnosisTextBox;
         private TextBox CommentTextBox;
         private Button SaveRecordButton;
-        private static List<System.Windows.Forms.TextBox> MyTextBoxGroup;
     }
 }
