@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 using GloveClasses;
 using GloveQueries;
-using GloveForms;
 
 namespace GloveForms
 {
@@ -33,25 +32,33 @@ namespace GloveForms
         private void SaveRecordButton_Click(object sender, EventArgs e)
         {
             
-            string name = this.NameTextBox.Text;
-            string lastname = this.LastnameTextBox.Text;
-            string document = this.DocumentTextBox.Text;
-            string birthday = this.BirthdayTextBox.Text;
-            string phoneNumber = this.PhoneTextBox.Text;
-            string email = this.EmailTextBox.Text;
-            string address = this.AddressTextBox.Text;
-            string admissionDate = this.AdmissionTextBox.Text;
-            int diagnosis = Convert.ToInt32(this.DiagnosisTextBox.Text);
-            string comment = this.CommentTextBox.Text;
+            if (this.FieldsAreEmpty())
+            {
+                MessageBox.Show("Debe completar la información solicitada!", "Tiene campos en blanco!");
+            }
+            else
+            {
+                string name = this.NameTextBox.Text;
+                string lastname = this.LastnameTextBox.Text;
+                string document = this.DocumentTextBox.Text;
+                string birthday = this.BirthdayTextBox.Text;
+                string phoneNumber = this.PhoneTextBox.Text;
+                string email = this.EmailTextBox.Text;
+                string address = this.AddressTextBox.Text;
+                string admissionDate = this.AdmissionTextBox.Text;
+                int diagnosis = Convert.ToInt32(this.DiagnosisTextBox.Text);
+                string comment = this.CommentTextBox.Text;
 
-            Person aPerson = new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
-            DatabaseOperations.insertRecord(aPerson);
-            // MessageBox.Show(aPerson.mergedWithCommas());
-            int personId = DatabaseOperations.recoverPersonID(document);
-            Patient aPatient = new Patient(personId, admissionDate, diagnosis, comment, 1);
-            DatabaseOperations.insertRecord(aPatient);
-            // MessageBox.Show(aPatient.mergedWithCommas());
-            this.CleanFields();
+                Person aPerson = new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
+                DatabaseOperations.insertRecord(aPerson);
+                // MessageBox.Show(aPerson.mergedWithCommas());
+                int personId = DatabaseOperations.recoverPersonID(document);
+                Patient aPatient = new Patient(personId, admissionDate, diagnosis, comment, 1);
+                DatabaseOperations.insertRecord(aPatient);
+                // MessageBox.Show(aPatient.mergedWithCommas());
+                MessageBox.Show("Se ha registrado un nuevo paciente!", "Paciente Registrado!");
+                this.CleanFields();
+            }
 
         }
 
@@ -62,6 +69,20 @@ namespace GloveForms
             {
                 tb.Text = "";
             }
+
+        }
+
+        private bool FieldsAreEmpty()
+        {
+
+            foreach (TextBox tb in MyTextBoxGroup)
+            {
+                if (tb.Text.Length == 0)
+                {
+                    return true;
+                }
+            }
+            return false;
 
         }
 

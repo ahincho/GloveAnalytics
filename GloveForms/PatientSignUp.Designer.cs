@@ -178,24 +178,25 @@
             this.SaveRecordButton.Click += new System.EventHandler(this.SaveRecordButton_Click);
             //
             // MyTextBoxGroup
-            //
-            this.MyTextBoxGroup.Add(this.NameTextBox);
-            this.MyTextBoxGroup.Add(this.LastnameTextBox);
-            this.MyTextBoxGroup.Add(this.DocumentTextBox);
-            this.MyTextBoxGroup.Add(this.BirthdayTextBox);
-            this.MyTextBoxGroup.Add(this.PhoneTextBox);
-            this.MyTextBoxGroup.Add(this.EmailTextBox);
-            this.MyTextBoxGroup.Add(this.AddressTextBox);
-            this.MyTextBoxGroup.Add(this.AdmissionTextBox);
-            this.MyTextBoxGroup.Add(this.DiagnosisTextBox);
-            this.MyTextBoxGroup.Add(this.CommentTextBox);
+            // 
+            this.MyTextBoxGroup.Add(NameTextBox);
+            this.MyTextBoxGroup.Add(LastnameTextBox);
+            this.MyTextBoxGroup.Add(DocumentTextBox);
+            this.MyTextBoxGroup.Add(BirthdayTextBox);
+            this.MyTextBoxGroup.Add(PhoneTextBox);
+            this.MyTextBoxGroup.Add(EmailTextBox);
+            this.MyTextBoxGroup.Add(AddressTextBox);
+            this.MyTextBoxGroup.Add(AdmissionTextBox);
+            this.MyTextBoxGroup.Add(DiagnosisTextBox);
+            this.MyTextBoxGroup.Add(CommentTextBox);
             // 
             // PatientSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::GloveForms.Properties.Resources.PatientFormBackground;
-            this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.ClientSize = new System.Drawing.Size(1264, 716);
             this.Controls.Add(this.SaveRecordButton);
             this.Controls.Add(this.CommentTextBox);
             this.Controls.Add(this.DiagnosisTextBox);
@@ -207,7 +208,9 @@
             this.Controls.Add(this.DocumentTextBox);
             this.Controls.Add(this.LastnameTextBox);
             this.Controls.Add(this.NameTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PatientSignUp";
             this.Text = "CITESOFT - GloveApp (Patient Form)";
             this.Load += new System.EventHandler(this.PatientSignUp_Load);

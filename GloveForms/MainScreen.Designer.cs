@@ -92,14 +92,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::GloveForms.Properties.Resources.MainScreenBackground;
-            this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.ClientSize = new System.Drawing.Size(1264, 716);
             this.Controls.Add(this.CreditsButton);
             this.Controls.Add(this.OptionsButton);
             this.Controls.Add(this.SignUpButton);
             this.Controls.Add(this.PlayButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CITESOFT - GloveApp (Main Screen)";
             this.ResumeLayout(false);
 

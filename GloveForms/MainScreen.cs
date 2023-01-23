@@ -14,6 +14,7 @@ namespace GloveForms
 
             PatientSignUp patientForm = new PatientSignUp();
             patientForm.Dock = DockStyle.Fill;
+            patientForm.StartPosition = FormStartPosition.CenterScreen;
             this.Hide();
             patientForm.ShowDialog();
             this.Show();
