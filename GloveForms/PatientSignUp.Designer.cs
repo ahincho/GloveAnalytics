@@ -40,6 +40,7 @@
             this.DiagnosisTextBox = new System.Windows.Forms.TextBox();
             this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.SaveRecordButton = new System.Windows.Forms.Button();
+            PatientSignUp.MyTextBoxGroup = new List<System.Windows.Forms.TextBox>();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -188,7 +189,19 @@
             this.Load += new System.EventHandler(this.PatientSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            //
+            // MyTextBoxGroup
+            // 
+            PatientSignUp.MyTextBoxGroup.Add(NameTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(LastnameTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(DocumentTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(BirthdayTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(PhoneTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(EmailTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(AddressTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(AdmissionTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(DiagnosisTextBox);
+            PatientSignUp.MyTextBoxGroup.Add(CommentTextBox);
         }
 
         #endregion
@@ -204,5 +217,6 @@
         private TextBox DiagnosisTextBox;
         private TextBox CommentTextBox;
         private Button SaveRecordButton;
+        private static List<System.Windows.Forms.TextBox> MyTextBoxGroup;
     }
 }
