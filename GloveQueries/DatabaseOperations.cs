@@ -42,7 +42,7 @@ namespace GloveQueries
             sCon.Open();
             string query = "INSERT INTO " + newRecord.getTableName() + "(" + newRecord.getFieldsWithCommas() + ") VALUES(" + newRecord.mergedWithCommas() + ");";
             mCommand = new SQLiteCommand(query, sCon);
-            mCommand.ExecuteReader();
+            mCommand.ExecuteNonQuery();
             sCon.Close();
 
         }
@@ -54,6 +54,7 @@ namespace GloveQueries
 
         public static int recoverPersonID(string dni)
         {
+            
             int personId = -1;
             sCon.Open();
             string query = "SELECT PerId FROM Persona WHERE PerDni = " + dni;
@@ -63,8 +64,10 @@ namespace GloveQueries
             {
                 personId = int.Parse(Convert.ToString(mDataReader[0]));
             }
+            mDataReader.Close();
             sCon.Close();
             return personId;
+
         }
 
     }
