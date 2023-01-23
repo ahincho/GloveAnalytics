@@ -12,12 +12,14 @@ namespace GloveQueries
 {
 
     #pragma warning disable CS8618
+    #pragma warning disable CS8604
     public class DatabaseOperations
     {
 
         private static MySQLiteConnection mSql = new MySQLiteConnection();
         private static SQLiteConnection sCon = mSql.GetConnection();
         private static SQLiteCommand mCommand;
+        private static SQLiteDataReader mDataReader;
 
         public static void initializeDatabase()
         {
@@ -48,6 +50,21 @@ namespace GloveQueries
         public static void deleteRecord(string table, int recordId)
         {
 
+        }
+
+        public static int recoverPersonID(string dni)
+        {
+            int personId = -1;
+            sCon.Open();
+            string query = "SELECT PerId FROM Persona WHERE PerDni = " + dni;
+            mCommand = new SQLiteCommand(query, sCon);
+            mDataReader = mCommand.ExecuteReader();
+            if (mDataReader.Read())
+            {
+                personId = int.Parse(Convert.ToString(mDataReader[0]));
+            }
+            sCon.Close();
+            return personId;
         }
 
     }

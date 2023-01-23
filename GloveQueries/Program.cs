@@ -52,6 +52,11 @@ namespace GloveDatabase
              * DatabaseOperations.insertRecord(new Session(3, "20/01/2019", 10.0f, 100.0f, 40, 5, angles, 1));
              */
 
+            // Looking for a Person and recovering its Id
+            // Looks good, this SQL Sentence return the 3rd PersonID
+
+            // Console.WriteLine(DatabaseOperations.recoverPersonID("72190199"));
+
         }
 
     }
