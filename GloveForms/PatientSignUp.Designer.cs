@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // PatientSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.BackgroundImage = global::GloveForms.Properties.Resources.PatientFormBackground;
+            this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Name = "PatientSignUp";
             this.Text = "PatientForm";
+            this.Load += new System.EventHandler(this.PatientSignUp_Load);
             this.ResumeLayout(false);
 
         }

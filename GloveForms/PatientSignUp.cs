@@ -16,5 +16,11 @@ namespace GloveForms
         {
             InitializeComponent();
         }
+
+        private void PatientSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
