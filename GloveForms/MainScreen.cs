@@ -1,5 +1,6 @@
 
-using Microsoft.VisualBasic;
+using System.Media;
+using WMPLib;
 
 namespace GloveForms
 {
@@ -32,6 +33,14 @@ namespace GloveForms
             this.Hide();
             documentForm.ShowDialog();
             this.Show();
+
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+
+            SoundPlayer backgroundSong = new SoundPlayer(@"D:/Proyectos Visual Studio/GloveAnalytics/GloveSounds/WeFellInLoveInOctober.wav");
+            backgroundSong.PlayLooping();
 
         }
 
