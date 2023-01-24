@@ -46,6 +46,8 @@
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.Transparent;
+            this.LoginButton.BackgroundImage = global::GloveForms.Properties.Resources.LoginButton;
+            this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

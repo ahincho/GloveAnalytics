@@ -37,10 +37,15 @@
             // 
             // PlayButton
             // 
+            this.PlayButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PlayButton.BackColor = System.Drawing.Color.Transparent;
+            this.PlayButton.BackgroundImage = global::GloveForms.Properties.Resources.PlayButton;
+            this.PlayButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PlayButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlayButton.FlatAppearance.BorderSize = 0;
             this.PlayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PlayButton.ForeColor = System.Drawing.Color.Transparent;
             this.PlayButton.Location = new System.Drawing.Point(460, 230);
             this.PlayButton.Margin = new System.Windows.Forms.Padding(0);
             this.PlayButton.Name = "PlayButton";
@@ -52,6 +57,8 @@
             // SignUpButton
             // 
             this.SignUpButton.BackColor = System.Drawing.Color.Transparent;
+            this.SignUpButton.BackgroundImage = global::GloveForms.Properties.Resources.SignUpButton;
+            this.SignUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUpButton.FlatAppearance.BorderSize = 0;
             this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -66,6 +73,8 @@
             // OptionsButton
             // 
             this.OptionsButton.BackColor = System.Drawing.Color.Transparent;
+            this.OptionsButton.BackgroundImage = global::GloveForms.Properties.Resources.OptionsButton;
+            this.OptionsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.OptionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OptionsButton.FlatAppearance.BorderSize = 0;
             this.OptionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -79,6 +88,8 @@
             // CreditsButton
             // 
             this.CreditsButton.BackColor = System.Drawing.Color.Transparent;
+            this.CreditsButton.BackgroundImage = global::GloveForms.Properties.Resources.CreditsButton;
+            this.CreditsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CreditsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreditsButton.FlatAppearance.BorderSize = 0;
             this.CreditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

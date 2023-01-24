@@ -6,7 +6,9 @@ namespace GloveForms
 {
     public partial class MainScreen : Form
     {
-        
+
+        SoundPlayer backgroundSong = new SoundPlayer(@"D:/Proyectos Visual Studio/GloveAnalytics/GloveSounds/We Fell In Love In October.wav");
+
         public MainScreen()
         {
             InitializeComponent();
@@ -39,8 +41,7 @@ namespace GloveForms
         private void MainScreen_Load(object sender, EventArgs e)
         {
 
-            SoundPlayer backgroundSong = new SoundPlayer(@"D:/Proyectos Visual Studio/GloveAnalytics/GloveSounds/WeFellInLoveInOctober.wav");
-            backgroundSong.PlayLooping();
+            this.backgroundSong.PlayLooping();
 
         }
 

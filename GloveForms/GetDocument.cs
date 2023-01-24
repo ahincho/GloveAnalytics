@@ -33,6 +33,7 @@ namespace GloveForms
                     // Here we can merge the forms or GUI with the videogame!
                     MessageBox.Show(Convert.ToString(documentId));
                 }
+                ClearField();
             }
             else
             {
@@ -45,6 +46,13 @@ namespace GloveForms
         {
 
             return DocumentTextBox.Text.Length == 0;
+
+        }
+
+        private void ClearField()
+        {
+
+            DocumentTextBox.Text = "";
 
         }
 
