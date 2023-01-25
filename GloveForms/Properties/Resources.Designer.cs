@@ -133,6 +133,16 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SaveRecordButton {
+            get {
+                object obj = ResourceManager.GetObject("SaveRecordButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SignUpButton {
             get {
                 object obj = ResourceManager.GetObject("SignUpButton", resourceCulture);
