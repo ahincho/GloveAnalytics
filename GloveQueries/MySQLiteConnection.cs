@@ -10,16 +10,17 @@ namespace GloveDatabase
 {
     class MySQLiteConnection
     {
-        
-        // You need to change this argument due the SQLite Database is an archive!
-        private string Source = "D:/Proyectos Visual Studio/GloveAnalytics/GloveQueries/GloveTest.db";
+
+        private static string AppPath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\", "/");
+        private static string BasePath = AppPath.Substring(0, AppPath.IndexOf("/GloveForms"));
+        private string Source = "/GloveQueries/GloveTest.db";
         private SQLiteConnection? Instance = null;
 
         public SQLiteConnection GetConnection()
         {
             if (Instance == null)
             {
-                Instance = new SQLiteConnection("Data Source = " + Source);
+                Instance = new SQLiteConnection("Data Source = " + BasePath + Source);
                 // Console.WriteLine("Data Source = " + Source);
             }
             // Console.WriteLine("Abierto");
