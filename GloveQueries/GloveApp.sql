@@ -1,0 +1,78 @@
+
+CREATE DATABASE GloveTest;
+
+USE GloveTest;
+
+CREATE TABLE Estado (
+	EstId INTEGER PRIMARY KEY AUTOINCREMENT,
+	EstNombre TEXT(20) UNIQUE NOT NULL,
+	EstRegistro INTEGER NOT NULL,
+	FOREIGN KEY (EstRegistro) REFERENCES Estado(EstId)
+);
+
+CREATE TABLE Persona (
+	PerId INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+	PerNombre TEXT(40) NOT NULL,
+	PerApellido TEXT(40) NOT NULL,
+	PerDni TEXT(12) UNIQUE NOT NULL,
+	PerFechaNac TEXT(16) NOT NULL,
+	PerTelefono TEXT(16) NOT NULL,
+	PerCorreo TEXT(30),
+	PerDireccion TEXT(50),
+	PerEstado INTEGER NOT NULL,
+	FOREIGN KEY (PerEstado) REFERENCES Estado(EstId)
+);
+
+CREATE TABLE Especialidad (
+	EspId INTEGER PRIMARY KEY AUTOINCREMENT,
+	EspNombre TEXT(40) UNIQUE NOT NULL,
+	EspEstado INTEGER NOT NULL,
+	FOREIGN KEY (EspEstado) REFERENCES Estado(EstId)
+);
+
+CREATE TABLE Medico (
+	MedId INTEGER PRIMARY KEY,
+	MedFechaIngreso TEXT(16) NOT NULL,
+	MedEspecialidad INTEGER NOT NULL,
+	MedEstado INTEGER NOT NULL,
+	FOREIGN KEY (MedId) REFERENCES Persona(PerId),
+	FOREIGN KEY (MedEspecialidad) REFERENCES Especialidad(EspId),
+	FOREIGN KEY (MedEstado) REFERENCES Estado(EstId)
+);
+
+CREATE TABLE Diagnostico (
+	DiaId INTEGER PRIMARY KEY AUTOINCREMENT,
+	DiaNombre TEXT(40) UNIQUE NOT NULL,
+	DiaDescripcion TEXT (120) NOT NULL,
+	DiaEstado INTEGER NOT NULL,
+	FOREIGN KEY (DiaEstado) REFERENCES Estado(EstId)
+);
+
+CREATE TABLE Paciente (
+	PacId INTEGER PRIMARY KEY,
+	PacFechaIngreso TEXT(16) NOT NULL,
+	PacDiagnostico INTEGER NOT NULL,
+	PacObservaciones TEXT(240),
+	PacEstado INTEGER NOT NULL,
+	FOREIGN KEY (PacId) REFERENCES Persona(PerId),
+	FOREIGN KEY (PacDiagnostico) REFERENCES Diagnostico(DiaId),
+	FOREIGN KEY (PacEstado) REFERENCES Estado(EstId)
+);
+
+CREATE TABLE Sesion (
+	SesId INTEGER PRIMARY KEY AUTOINCREMENT,
+	SesPacienteId INTEGER NOT NULL,
+	SesFecha TEXT(16) NOT NULL,
+	SesTiempo REAL NOT NULL,
+	SesMetros REAL NOT NULL,
+	SesMonedas INTEGER NOT NULL,
+	SesFallos INTEGER,
+	SesAngPulgar REAL NOT NULL,
+	SesAngIndice REAL NOT NULL,
+	SesAngMedio REAL NOT NULL,
+	SesAngAnular REAL NOT NULL,
+	SesAngMenique REAL NOT NULL,
+	SesEstado INTEGER NOT NULL,
+	FOREIGN KEY (SesPacienteId) REFERENCES Paciente(PacId),
+	FOREIGN KEY (SesEstado) REFERENCES Estado(EstId)
+);
