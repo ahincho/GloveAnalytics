@@ -21,7 +21,7 @@ namespace GloveQueries
         private static SQLiteCommand mCommand;
         private static SQLiteDataReader mDataReader;
 
-        public static void initializeDatabase()
+        public static void InitializeDatabase()
         {
 
             // Database have to contain the Active, Deleted and Playing Status
@@ -31,12 +31,12 @@ namespace GloveQueries
             mCommand = new SQLiteCommand(activeStatus, sCon);
             mCommand.ExecuteReader();
             sCon.Close();
-            insertRecord(new Status("Eliminado", 1));
-            insertRecord(new Status("Jugando", 1));
+            InsertRecord(new Status("Eliminado", 1));
+            InsertRecord(new Status("Jugando", 1));
 
         }
 
-        public static void insertRecord(Recordable newRecord)
+        public static void InsertRecord(Recordable newRecord)
         {
 
             sCon.Open();
@@ -47,26 +47,26 @@ namespace GloveQueries
 
         }
 
-        public static void deleteRecord(string table, int recordId)
+        public static void DeleteRecord(string table, int recordId)
         {
 
         }
 
-        public static int recoverPersonID(string dni)
+        public static int RecoverAnId(string table, string idField, string uniqueField, string uniqueValue)
         {
             
-            int personId = -1;
+            int recoveredId = -1;
             sCon.Open();
-            string query = "SELECT PerId FROM Persona WHERE PerDni = " + dni;
+            string query = "SELECT " + idField + " FROM " + table + " WHERE " + uniqueField + " = " + uniqueValue;
             mCommand = new SQLiteCommand(query, sCon);
             mDataReader = mCommand.ExecuteReader();
             if (mDataReader.Read())
             {
-                personId = int.Parse(Convert.ToString(mDataReader[0]));
+                recoveredId = int.Parse(Convert.ToString(mDataReader[0]));
             }
             mDataReader.Close();
             sCon.Close();
-            return personId;
+            return recoveredId;
 
         }
 
