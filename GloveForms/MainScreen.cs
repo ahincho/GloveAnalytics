@@ -7,7 +7,10 @@ namespace GloveForms
     public partial class MainScreen : Form
     {
 
-        SoundPlayer backgroundSong = new SoundPlayer(@"D:/Proyectos Visual Studio/GloveAnalytics/GloveSounds/We Fell In Love In October.wav");
+        private static string AppPath = Application.StartupPath.Replace("\\", "/");
+        private static string BasePath = AppPath.Substring(0, AppPath.IndexOf("/GloveForms"));
+        private static string PathBackgroundSong = "/GloveSounds/We Fell In Love In October.wav";
+        private static SoundPlayer BackgroundSong = new SoundPlayer(BasePath + PathBackgroundSong);
 
         public MainScreen()
         {
@@ -34,14 +37,22 @@ namespace GloveForms
             documentForm.StartPosition = FormStartPosition.CenterScreen;
             this.Hide();
             documentForm.ShowDialog();
-            this.Show();
+            if (GetDocument.GetSuccessfulLoginFlag())
+            {
+                // Here we can merge the forms or GUI with the videogame!
+                Application.Exit();
+            }
+            else
+            {
+                this.Show();
+            }
 
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
 
-            this.backgroundSong.PlayLooping();
+            MainScreen.BackgroundSong.PlayLooping();
 
         }
 

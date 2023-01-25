@@ -13,6 +13,8 @@ namespace GloveForms
     public partial class GetDocument : Form
     {
         
+        private static bool SuccessfulLogin = false;
+
         public GetDocument()
         {
             InitializeComponent();
@@ -30,8 +32,10 @@ namespace GloveForms
                 }
                 else
                 {
-                    // Here we can merge the forms or GUI with the videogame!
+                    this.Hide();
                     MessageBox.Show(Convert.ToString(documentId));
+                    GetDocument.SetSuccessfulLoginFlag(true);
+                    this.Close();
                 }
                 ClearField();
             }
@@ -53,6 +57,20 @@ namespace GloveForms
         {
 
             DocumentTextBox.Text = "";
+
+        }
+
+        private static void SetSuccessfulLoginFlag(bool flag)
+        {
+
+            GetDocument.SuccessfulLogin = flag;
+
+        }
+
+        public static bool GetSuccessfulLoginFlag()
+        {
+
+            return GetDocument.SuccessfulLogin;
 
         }
 
