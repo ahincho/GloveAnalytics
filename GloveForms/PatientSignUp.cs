@@ -41,23 +41,12 @@ namespace GloveForms
             }
             else
             {
-                string name = this.NameTextBox.Text;
-                string lastname = this.LastnameTextBox.Text;
-                string document = this.DocumentTextBox.Text;
-                string birthday = this.BirthdayTextBox.Text;
-                string phoneNumber = this.PhoneTextBox.Text;
-                string email = this.EmailTextBox.Text;
-                string address = this.AddressTextBox.Text;
-                string admissionDate = this.AdmissionTextBox.Text;
-                int diagnosis = Convert.ToInt32(this.DiagnosisTextBox.Text);
-                string comment = this.CommentTextBox.Text;
-
-                Person aPerson = new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
-                DatabaseOperations.insertRecord(aPerson);
+                Person aPerson = this.CreatePersonFromFields();
+                DatabaseOperations.InsertRecord(aPerson);
                 // MessageBox.Show(aPerson.mergedWithCommas());
-                int personId = DatabaseOperations.recoverPersonID(document);
-                Patient aPatient = new Patient(personId, admissionDate, diagnosis, comment, 1);
-                DatabaseOperations.insertRecord(aPatient);
+                int personId = DatabaseOperations.RecoverPersonID(aPerson.getDni());
+                Patient aPatient = this.CreatePatientFromFields(personId);
+                DatabaseOperations.InsertRecord(aPatient);
                 // MessageBox.Show(aPatient.mergedWithCommas());
                 MessageBox.Show("Se ha registrado un nuevo paciente!", "Paciente Registrado!", MessageBoxButtons.OK);
                 this.CleanFields();
@@ -86,6 +75,32 @@ namespace GloveForms
                 }
             }
             return false;
+
+        }
+
+        private Person CreatePersonFromFields()
+        {
+
+            string name = this.NameTextBox.Text;
+            string lastname = this.LastnameTextBox.Text;
+            string document = this.DocumentTextBox.Text;
+            string birthday = this.BirthdayTextBox.Text;
+            string phoneNumber = this.PhoneTextBox.Text;
+            string email = this.EmailTextBox.Text;
+            string address = this.AddressTextBox.Text;
+
+            return new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
+
+        }
+
+        private Patient CreatePatientFromFields(int personId)
+        {
+
+            string admissionDate = this.AdmissionTextBox.Text;
+            int diagnosis = Convert.ToInt32(this.DiagnosisTextBox.Text);
+            string comment = this.CommentTextBox.Text;
+            
+            return new Patient(personId, admissionDate, diagnosis, comment, 1);
 
         }
 

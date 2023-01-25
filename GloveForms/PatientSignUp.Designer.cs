@@ -167,6 +167,8 @@
             // SaveRecordButton
             // 
             this.SaveRecordButton.BackColor = System.Drawing.Color.Transparent;
+            this.SaveRecordButton.BackgroundImage = global::GloveForms.Properties.Resources.SaveRecordButton;
+            this.SaveRecordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.SaveRecordButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveRecordButton.FlatAppearance.BorderSize = 0;
             this.SaveRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
