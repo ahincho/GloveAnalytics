@@ -3,13 +3,15 @@ using System.Media;
 
 namespace GloveForms
 {
+
+    # pragma warning disable IDE0057, IDE0090, IDE0017
     public partial class MainScreen : Form
     {
 
-        private static string AppPath = Application.StartupPath.Replace("\\", "/");
-        private static string BasePath = AppPath.Substring(0, AppPath.IndexOf("/GloveForms"));
-        private static string PathBackgroundSong = "/GloveSounds/We Fell In Love In October.wav";
-        private static SoundPlayer BackgroundSong = new SoundPlayer(BasePath + PathBackgroundSong);
+        private readonly static string AppPath = Application.StartupPath.Replace("\\", "/");
+        private readonly static string BasePath = AppPath.Substring(0, AppPath.IndexOf("/GloveForms"));
+        private readonly static string PathBackgroundSong = "/GloveSounds/We Fell In Love In October.wav";
+        private readonly static SoundPlayer BackgroundSong = new SoundPlayer(BasePath + PathBackgroundSong);
 
         public MainScreen()
         {

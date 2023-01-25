@@ -44,7 +44,7 @@ namespace GloveForms
                 Person aPerson = this.CreatePersonFromFields();
                 DatabaseOperations.InsertRecord(aPerson);
                 // MessageBox.Show(aPerson.mergedWithCommas());
-                int personId = DatabaseOperations.RecoverPersonID(aPerson.getDni());
+                int personId = DatabaseOperations.RecoverAnId(aPerson.GetTableName(), "PerId", "PerDni", aPerson.GetDni());
                 Patient aPatient = this.CreatePatientFromFields(personId);
                 DatabaseOperations.InsertRecord(aPatient);
                 // MessageBox.Show(aPatient.mergedWithCommas());
