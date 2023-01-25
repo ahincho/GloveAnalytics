@@ -176,19 +176,6 @@
             this.SaveRecordButton.TabIndex = 10;
             this.SaveRecordButton.UseVisualStyleBackColor = false;
             this.SaveRecordButton.Click += new System.EventHandler(this.SaveRecordButton_Click);
-            //
-            // MyTextBoxGroup
-            // 
-            this.MyTextBoxGroup.Add(NameTextBox);
-            this.MyTextBoxGroup.Add(LastnameTextBox);
-            this.MyTextBoxGroup.Add(DocumentTextBox);
-            this.MyTextBoxGroup.Add(BirthdayTextBox);
-            this.MyTextBoxGroup.Add(PhoneTextBox);
-            this.MyTextBoxGroup.Add(EmailTextBox);
-            this.MyTextBoxGroup.Add(AddressTextBox);
-            this.MyTextBoxGroup.Add(AdmissionTextBox);
-            this.MyTextBoxGroup.Add(DiagnosisTextBox);
-            this.MyTextBoxGroup.Add(CommentTextBox);
             // 
             // PatientSignUp
             // 

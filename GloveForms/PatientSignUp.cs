@@ -19,13 +19,16 @@ namespace GloveForms
         
         public PatientSignUp()
         {
+            
             InitializeComponent();
+            this.InitializeTextBoxGroup();
+
         }
 
         private void PatientSignUp_Load(object sender, EventArgs e)
         {
 
-
+            
 
         }
 
@@ -83,6 +86,25 @@ namespace GloveForms
                 }
             }
             return false;
+
+        }
+
+        private void InitializeTextBoxGroup()
+        {
+
+            //
+            // MyTextBoxGroup
+            // 
+            this.MyTextBoxGroup.Add(NameTextBox);
+            this.MyTextBoxGroup.Add(LastnameTextBox);
+            this.MyTextBoxGroup.Add(DocumentTextBox);
+            this.MyTextBoxGroup.Add(BirthdayTextBox);
+            this.MyTextBoxGroup.Add(PhoneTextBox);
+            this.MyTextBoxGroup.Add(EmailTextBox);
+            this.MyTextBoxGroup.Add(AddressTextBox);
+            this.MyTextBoxGroup.Add(AdmissionTextBox);
+            this.MyTextBoxGroup.Add(DiagnosisTextBox);
+            this.MyTextBoxGroup.Add(CommentTextBox);
 
         }
 

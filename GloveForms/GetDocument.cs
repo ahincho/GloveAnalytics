@@ -17,7 +17,9 @@ namespace GloveForms
 
         public GetDocument()
         {
+
             InitializeComponent();
+
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
