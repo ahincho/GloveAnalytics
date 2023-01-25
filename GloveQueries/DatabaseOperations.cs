@@ -1,4 +1,5 @@
-﻿using GloveClasses;
+﻿
+using GloveClasses;
 using GloveDatabase;
 using GloveInterfaces;
 using System;
@@ -11,13 +12,12 @@ using System.Threading.Tasks;
 namespace GloveQueries
 {
 
-    #pragma warning disable CS8618
-    #pragma warning disable CS8604
+    #pragma warning disable CS8618, CS8604, IDE0090
     public class DatabaseOperations
     {
 
-        private static MySQLiteConnection mSql = new MySQLiteConnection();
-        private static SQLiteConnection sCon = mSql.GetConnection();
+        private readonly static MySQLiteConnection mSql = new MySQLiteConnection();
+        private readonly static SQLiteConnection sCon = mSql.GetConnection();
         private static SQLiteCommand mCommand;
         private static SQLiteDataReader mDataReader;
 
@@ -36,11 +36,11 @@ namespace GloveQueries
 
         }
 
-        public static void InsertRecord(Recordable newRecord)
+        public static void InsertRecord(IRecordable newRecord)
         {
 
             sCon.Open();
-            string query = "INSERT INTO " + newRecord.getTableName() + "(" + newRecord.getFieldsWithCommas() + ") VALUES(" + newRecord.mergedWithCommas() + ");";
+            string query = "INSERT INTO " + newRecord.GetTableName() + "(" + newRecord.GetFieldsWithCommas() + ") VALUES(" + newRecord.MergedWithCommas() + ");";
             mCommand = new SQLiteCommand(query, sCon);
             mCommand.ExecuteNonQuery();
             sCon.Close();
@@ -49,6 +49,8 @@ namespace GloveQueries
 
         public static void DeleteRecord(string table, int recordId)
         {
+            
+
 
         }
 
