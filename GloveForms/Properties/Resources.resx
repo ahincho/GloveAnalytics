@@ -121,11 +121,11 @@
   <data name="CreditsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CreditsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoginButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SignUpButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SignUpButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PatientFormBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PatientFormBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,13 +133,13 @@
   <data name="GetDocumentBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GetDocumentBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MainScreenBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MainScreenBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OptionsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OptionsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MainScreenBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainScreenBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
