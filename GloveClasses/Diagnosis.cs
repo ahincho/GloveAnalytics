@@ -10,43 +10,43 @@ using GloveInterfaces;
 namespace GloveClasses
 {
 
-    #pragma warning disable CS8618
-    public class Diagnosis : Recordable
+    # pragma warning disable IDE0090, CS8618
+    public class Diagnosis : IRecordable
     {
 
         // Attributes of Diagnosis Class
 
-        private static string Table = "Diagnostico";
+        private readonly static string Table = "Diagnostico";
         private string Name;
         private string Description;
         private int CurrentStatus;
-        private static List<string> Fields = new List<string>() { "DiagNombre", "DiagDescripcion", "DiagEstado" };
-        private List<string> DataSummary = new List<string>();
+        private readonly static List<string> Fields = new List<string>() { "DiagNombre", "DiagDescripcion", "DiagEstado" };
+        private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
         public Diagnosis(string name, string description, int currentStatus)
         {
-            setName(name);
-            setDescription(description);
-            setCurrentStatus(currentStatus);
+            SetName(name);
+            SetDescription(description);
+            SetCurrentStatus(currentStatus);
         }
 
         // Setters for Diagnosis Class
 
-        public void setName(string name)
+        public void SetName(string name)
         {
             this.Name = name;
             this.DataSummary.Add("'" + name.ToString() + "'");
         }
 
-        public void setDescription(string description)
+        public void SetDescription(string description)
         {
             this.Description = description;
             this.DataSummary.Add("'" + description.ToString() + "'");
         }
 
-        public void setCurrentStatus(int currentStatus)
+        public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
             this.DataSummary.Add(currentStatus.ToString());
@@ -54,34 +54,34 @@ namespace GloveClasses
 
         // Setters for Diagnosis Class
 
-        public string getName()
+        public string GetName()
         {
             return this.Name;
         }
 
-        public string getDescription()
+        public string GetDescription()
         {
             return this.Description;
         }
 
-        public int getCurrentStatus()
+        public int GetCurrentStatus()
         {
             return this.CurrentStatus;
         }
 
-        private List<string> getDataSummary()
+        private List<string> GetDataSummary()
         {
             return this.DataSummary;
         }
 
-        private static List<string> getFields()
+        private static List<string> GetFields()
         {
             return Diagnosis.Fields;
         }
 
         // Method which returns the name of the table associated
 
-        public string getTableName()
+        public string GetTableName()
         {
             return Diagnosis.Table;
         }
@@ -90,17 +90,17 @@ namespace GloveClasses
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public string getFieldsWithCommas()
+        public string GetFieldsWithCommas()
         {
-            return string.Join<Object>(",", getFields());
+            return string.Join<Object>(",", GetFields());
         }
 
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
-        public string mergedWithCommas()
+        public string MergedWithCommas()
         {
-            string merged = string.Join<Object>(", ", getDataSummary());
+            string merged = string.Join<Object>(", ", GetDataSummary());
             return merged;
         }
 

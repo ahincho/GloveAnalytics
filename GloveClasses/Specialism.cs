@@ -8,36 +8,37 @@ using GloveInterfaces;
 
 namespace GloveClasses
 {
-   
-    public class Specialism : Recordable
+
+    # pragma warning disable CS8618, IDE0090
+    public class Specialism : IRecordable
     {
 
         // Attributes of Specialism Class
 
-        private static string Table = "Especialidad";
+        private readonly static string Table = "Especialidad";
         private string Name;
         private int CurrentStatus;
-        private static List<string> Fields = new List<string>() { "EspNombre", "EspEstado" };
-        private List<string> DataSummary = new List<string>();
+        private readonly static List<string> Fields = new List<string>() { "EspNombre", "EspEstado" };
+        private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
         #pragma warning disable CS8618
         public Specialism(string name, int currentStatus)
         {
-            setName(name);
-            setCurrentStatus(currentStatus);
+            SetName(name);
+            SetCurrentStatus(currentStatus);
         }
 
         // Setters for Specialism Class
 
-        public void setName(string name)
+        public void SetName(string name)
         {
             this.Name = name;
             this.DataSummary.Add("'" + name.ToString() + "'");
         }
 
-        public void setCurrentStatus(int currentStatus)
+        public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
             this.DataSummary.Add(currentStatus.ToString());
@@ -45,29 +46,29 @@ namespace GloveClasses
 
         // Getters for Specialism Class
 
-        public string getName()
+        public string GetName()
         {
             return this.Name;
         }
 
-        public int getCurrentStatus()
+        public int GetCurrentStatus()
         {
             return this.CurrentStatus;
         }
 
-        private List<string> getDataSummary()
+        private List<string> GetDataSummary()
         {
             return this.DataSummary;
         }
 
-        private static List<string> getFields()
+        private static List<string> GetFields()
         {
             return Specialism.Fields;
         }
 
         // Method which returns the name of the table associated
 
-        public string getTableName()
+        public string GetTableName()
         {
             return Specialism.Table;
         }
@@ -75,17 +76,17 @@ namespace GloveClasses
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public string getFieldsWithCommas()
+        public string GetFieldsWithCommas()
         {
-            return string.Join<Object>(",", getFields());
+            return string.Join<Object>(",", GetFields());
         }
 
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
-        public string mergedWithCommas()
+        public string MergedWithCommas()
         {
-            string merged = string.Join<Object>(", ", getDataSummary());
+            string merged = string.Join<Object>(", ", GetDataSummary());
             return merged;
         }
 

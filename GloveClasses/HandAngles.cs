@@ -8,59 +8,60 @@ using GloveInterfaces;
 
 namespace GloveClasses
 {
-    
-    public class HandAngles : Recordable
+
+    # pragma warning disable IDE0090
+    public class HandAngles : IRecordable
     {
 
         // Attributes of Hand Angles Class
 
-        private static string Table = "Angulos";
+        private readonly static string Table = "Angulos";
         private float ThumbAngle;
         private float IndexAngle;
         private float MiddleAngle;
         private float RingAngle;
         private float PinkyAngle;
-        private static List<string> Fields = new List<string>() { "SesAngPulgar", "SesAngIndice", "SesAngMedio", "SesAngAnular", "SesAngMenique" };
-        private List<string> DataSummary = new List<string>();
+        private readonly static List<string> Fields = new List<string>() { "SesAngPulgar", "SesAngIndice", "SesAngMedio", "SesAngAnular", "SesAngMenique" };
+        private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
         public HandAngles(float thumb, float index, float middle, float ring, float pinky)
         {
-            setThumbAngle(thumb);
-            setIndexAngle(index);
-            setMiddleAngle(middle);
-            setRingAngle(ring);
-            setPinkyAngle(pinky);
+            SetThumbAngle(thumb);
+            SetIndexAngle(index);
+            SetMiddleAngle(middle);
+            SetRingAngle(ring);
+            SetPinkyAngle(pinky);
         }
 
         // Setters for Hand Angles Class
 
-        public void setThumbAngle(float thumbAngle)
+        public void SetThumbAngle(float thumbAngle)
         {
             this.ThumbAngle = thumbAngle;
             this.DataSummary.Add(thumbAngle.ToString());
         }
 
-        public void setIndexAngle(float indexAngle)
+        public void SetIndexAngle(float indexAngle)
         {
             this.IndexAngle = indexAngle;
             this.DataSummary.Add(indexAngle.ToString());
         }
 
-        public void setMiddleAngle(float middleAngle)
+        public void SetMiddleAngle(float middleAngle)
         {
             this.MiddleAngle = middleAngle;
             this.DataSummary.Add(middleAngle.ToString());
         }
 
-        public void setRingAngle(float ringAngle)
+        public void SetRingAngle(float ringAngle)
         {
             this.RingAngle = ringAngle;
             this.DataSummary.Add(ringAngle.ToString());
         }
 
-        public void setPinkyAngle(float pinkyAngle)
+        public void SetPinkyAngle(float pinkyAngle)
         {
             this.PinkyAngle = pinkyAngle;
             this.DataSummary.Add(pinkyAngle.ToString());
@@ -68,44 +69,44 @@ namespace GloveClasses
 
         // Getters for Hand Angles Class
 
-        public float getThumbAngle()
+        public float GetThumbAngle()
         {
             return this.ThumbAngle;
         }
 
-        public float getIndexAngle()
+        public float GetIndexAngle()
         {
             return this.IndexAngle;
         }
 
-        public float getMiddleAngle()
+        public float GetMiddleAngle()
         {
             return this.MiddleAngle;
         }
 
-        public float getRingAngle()
+        public float GetRingAngle()
         {
             return this.RingAngle;
         }
 
-        public float getPinkyAngle()
+        public float GetPinkyAngle()
         {
             return this.PinkyAngle;
         }
 
-        private List<string> getDataSummary()
+        private List<string> GetDataSummary()
         {
             return this.DataSummary;
         }
 
-        private static List<string> getFields()
+        private static List<string> GetFields()
         {
             return HandAngles.Fields;
         }
 
         // Method which returns the name of the table associated
 
-        public string getTableName()
+        public string GetTableName()
         {
             return HandAngles.Table;
         }
@@ -113,22 +114,22 @@ namespace GloveClasses
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public string getFieldsWithCommas()
+        public string GetFieldsWithCommas()
         {
-            return string.Join<Object>(",", getFields());
+            return string.Join<Object>(",", GetFields());
         }
 
-        public static string getClassFields()
+        public static string GetClassFields()
         {
-            return string.Join<Object>(",", getFields());
+            return string.Join<Object>(",", GetFields());
         }
 
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
-        public string mergedWithCommas()
+        public string MergedWithCommas()
         {
-            string merged = string.Join<Object>(", ", getDataSummary());
+            string merged = string.Join<Object>(", ", GetDataSummary());
             return merged;
         }
 

@@ -9,59 +9,59 @@ using GloveInterfaces;
 namespace GloveClasses
 {
     
-    #pragma warning disable CS8618
-    public class Patient : Recordable
+    # pragma warning disable CS8618, IDE0090
+    public class Patient : IRecordable
     {
 
         // Attributes of Patient Class
 
-        private static string Table = "Paciente";
+        private readonly static string Table = "Paciente";
         private int Id;
         private string AdmissionDate;
         private int Diagnosis;
         private string Comment;
         private int CurrentStatus;
-        private static List<string> Fields = new List<string>() { "PacId", "PacFechaIngreso", "PacDiagnostico", "PacObservaciones", "PacEstado" };
-        private List<string> DataSummary = new List<string>();
+        private readonly static List<string> Fields = new List<string>() { "PacId", "PacFechaIngreso", "PacDiagnostico", "PacObservaciones", "PacEstado" };
+        private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
         public Patient(int id, string admissionDate, int diagnosis, string comment, int currentStatus)
         {
-            setId(id);
-            setAdmissionDate(admissionDate);
-            setDiagnosis(diagnosis);
-            setComment(comment);
-            setCurrentStatus(currentStatus);
+            SetId(id);
+            SetAdmissionDate(admissionDate);
+            SetDiagnosis(diagnosis);
+            SetComment(comment);
+            SetCurrentStatus(currentStatus);
         }
 
         // Setters for Patient Class
 
-        public void setId(int id)
+        public void SetId(int id)
         {
             this.Id = id;
             this.DataSummary.Add(id.ToString());
         }
 
-        public void setAdmissionDate(string admissionDate)
+        public void SetAdmissionDate(string admissionDate)
         {
             this.AdmissionDate = admissionDate;
             this.DataSummary.Add("'" + admissionDate.ToString() + "'");
         }
 
-        public void setDiagnosis(int diagnosis)
+        public void SetDiagnosis(int diagnosis)
         {
             this.Diagnosis = diagnosis;
             this.DataSummary.Add(diagnosis.ToString());
         }
 
-        public void setComment(string comment)
+        public void SetComment(string comment)
         {
             this.Comment = comment;
             this.DataSummary.Add("'" + comment.ToString() + "'");
         }
 
-        public void setCurrentStatus(int currentStatus)
+        public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
             this.DataSummary.Add(currentStatus.ToString());
@@ -69,44 +69,44 @@ namespace GloveClasses
 
         // Setters for Patient Class
 
-        public int getId()
+        public int GetId()
         {
             return this.Id;
         }
 
-        public string getAdmissionDate()
+        public string GetAdmissionDate()
         {
             return this.AdmissionDate;
         }
 
-        public int getDiagnosis()
+        public int GetDiagnosis()
         {
             return this.Diagnosis;
         }
 
-        public string getComment()
+        public string GetComment()
         {
             return this.Comment;
         }
 
-        public int getCurrentStatus()
+        public int GetCurrentStatus()
         {
             return this.CurrentStatus;
         }
 
-        private List<string> getDataSummary()
+        private List<string> GetDataSummary()
         {
             return this.DataSummary;
         }
 
-        private static List<string> getFields()
+        private static List<string> GetFields()
         {
             return Patient.Fields;
         }
 
         // Method which returns the name of the table associated
 
-        public string getTableName()
+        public string GetTableName()
         {
             return Patient.Table;
         }
@@ -114,17 +114,17 @@ namespace GloveClasses
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public string getFieldsWithCommas()
+        public string GetFieldsWithCommas()
         {
-            return string.Join<Object>(",", getFields());
+            return string.Join<Object>(",", GetFields());
         }
         
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
-        public string mergedWithCommas()
+        public string MergedWithCommas()
         {
-            string merged = string.Join<Object>(", ", getDataSummary());
+            string merged = string.Join<Object>(", ", GetDataSummary());
             return merged;
         }
 

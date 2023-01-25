@@ -9,51 +9,51 @@ using GloveInterfaces;
 namespace GloveClasses
 {
 
-    #pragma warning disable CS8618
-    public class Medic : Recordable
+    # pragma warning disable CS8618, IDE0090
+    public class Medic : IRecordable
     {
 
         // Attributes of Medic Class
 
-        private static string Table = "Medico";
+        private readonly static string Table = "Medico";
         private int Id;
         private string EntryDate;
         private int Specialism;
         private int CurrentStatus;
-        private static List<string> Fields = new List<string>() { "MedId", "MedFechaIngreso", "MedEspecialidad", "MedEstado" };
-        private List<string> DataSummary = new List<string>();
+        private readonly static List<string> Fields = new List<string>() { "MedId", "MedFechaIngreso", "MedEspecialidad", "MedEstado" };
+        private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
         public Medic(int id, string entryDate, int specialism, int currentStatus)
         {
-            setId(id);
-            setEntryDate(entryDate);
-            setSpecialism(specialism);
-            setCurrentStatus(currentStatus);
+            SetId(id);
+            SetEntryDate(entryDate);
+            SetSpecialism(specialism);
+            SetCurrentStatus(currentStatus);
         }
 
         // Setters for Person Class
 
-        public void setId(int id)
+        public void SetId(int id)
         {
             this.Id = id;
             this.DataSummary.Add(id.ToString());
         }
 
-        public void setEntryDate(string entryDate)
+        public void SetEntryDate(string entryDate)
         {
             this.EntryDate = entryDate;
             this.DataSummary.Add("'" + entryDate.ToString() + "'");
         }
 
-        public void setSpecialism(int specialism)
+        public void SetSpecialism(int specialism)
         {
             this.Specialism = specialism;
             this.DataSummary.Add(specialism.ToString());
         }
 
-        public void setCurrentStatus(int currentStatus)
+        public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
             this.DataSummary.Add(currentStatus.ToString());
@@ -61,39 +61,39 @@ namespace GloveClasses
 
         // Getters for Medic Class
 
-        public int getId()
+        public int GetId()
         {
             return this.Id;
         }
 
-        public string getEntryDate()
+        public string GetEntryDate()
         {
             return this.EntryDate;
         }
 
-        public int getSpecialism()
+        public int GetSpecialism()
         {
             return this.Specialism;
         }
 
-        public int getCurrentStatus()
+        public int GetCurrentStatus()
         {
             return this.CurrentStatus;
         }
 
-        private List<string> getDataSummary()
+        private List<string> GetDataSummary()
         {
             return this.DataSummary;
         }
 
-        private static List<string> getFields()
+        private static List<string> GetFields()
         {
             return Medic.Fields;
         }
 
         // Method which returns the name of the table associated
 
-        public string getTableName()
+        public string GetTableName()
         {
             return Medic.Table;
         }
@@ -101,17 +101,17 @@ namespace GloveClasses
         // Method to concatenate all the Class Fields. Useful when
         // we need to do a query and need to enum the fields of the table
 
-        public string getFieldsWithCommas()
+        public string GetFieldsWithCommas()
         {
-            return string.Join<Object>(",", getFields());
+            return string.Join<Object>(",", GetFields());
         }
 
         // Method to concatenate all the Class Data
         // Useful when we need to insert this object in the Database
 
-        public string mergedWithCommas()
+        public string MergedWithCommas()
         {
-            string merged = string.Join<Object>(", ", getDataSummary());
+            string merged = string.Join<Object>(", ", GetDataSummary());
             return merged;
         }
 
