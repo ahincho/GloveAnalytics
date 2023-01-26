@@ -104,6 +104,21 @@ namespace GloveClasses
             return merged;
         }
 
+
+        // Method to get the Status Field name in its table
+
+        public static string GetStatusFieldName()
+        {
+            return Diagnosis.Table.Substring(0, 3) + "Estado";
+        }
+
+        // Method to get the Id Field name in its table
+
+        public static string GetIdFieldName()
+        {
+            return Diagnosis.Table.Substring(0, 3) + "Id";
+        }
+
     }
 
 }

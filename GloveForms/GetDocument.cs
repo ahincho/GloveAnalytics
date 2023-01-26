@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GloveQueries;
+using GloveClasses;
 
 namespace GloveForms
 {
@@ -36,6 +39,7 @@ namespace GloveForms
                 {
                     this.Hide();
                     MessageBox.Show(Convert.ToString(documentId)); // When necessary you should comment this line
+                    int patientId = DatabaseOperations.RecoverAnId();
                     GetDocument.SetSuccessfulLoginFlag(true);
                     this.Close();
                 }

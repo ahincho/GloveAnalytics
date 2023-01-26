@@ -51,10 +51,10 @@ namespace GloveQueries
 
         }
 
-        public static void DeleteRecord(string table, string int recordId)
+        public static void DeleteRecord(string table, int recordId)
         {
 
-            string query = "UPDATE Estado SET EstRegistro = 2 WHERE EstNombre = 'Jugando';";
+            string query = "UPDATE Estado SET EstEstado = 2 WHERE EstNombre = 'Jugando';";
 
         }
 
