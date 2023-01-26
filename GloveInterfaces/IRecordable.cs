@@ -25,20 +25,6 @@ namespace GloveInterfaces
             return "INSERT INTO " + GetTableName() + "(" + GetFieldsWithCommas() + ") VALUES(" + MergedWithCommas() + ");";
         }
 
-        // Method to get the Status Field name in its table
-
-        public string GetStatusFieldName()
-        {
-            return GetTableName().Substring(0, 3) + "Estado";
-        }
-
-        // Method to get the Id Field name in its table
-
-        public string GetIdFieldName()
-        {
-            return GetTableName().Substring(0, 3) + "Id";
-        }
-
     }
 
 }
