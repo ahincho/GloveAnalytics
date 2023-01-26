@@ -35,10 +35,10 @@ namespace GloveQueries
                 mCommand = new SQLiteCommand(insertActiveQuery, sCon);
                 mCommand.ExecuteNonQuery();
                 sCon.Close();
-                InsertRecord(new Status("Eliminado", 1));
-                InsertRecord(new Status("Jugando", 1));
-                DatabaseOperations.deleteStatusId = RecoverAnId("Estado", "EstId", "EstNobmre", "Eliminado");
+                DatabaseOperations.InsertRecord(new Status("Eliminado", 1));
+                DatabaseOperations.InsertRecord(new Status("Jugando", 1));
             }
+            DatabaseOperations.deleteStatusId = RecoverAnId("Estado", "EstId", "EstNombre", "Eliminado");
 
         }
 
@@ -67,7 +67,7 @@ namespace GloveQueries
         public static int RecoverAnId(string table, string idField, string uniqueField, string uniqueValue)
         {
             
-            int recoveredId = 0;
+            int recoveredId = -1;
             string query = "SELECT " + idField + " FROM " + table + " WHERE " + uniqueField + " = '" + uniqueValue + "';";
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);

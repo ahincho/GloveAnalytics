@@ -39,7 +39,7 @@ namespace GloveForms
                 {
                     this.Hide();
                     MessageBox.Show(Convert.ToString(documentId)); // When necessary you should comment this line
-                    int patientId = DatabaseOperations.RecoverAnId();
+                    int patientId = DatabaseOperations.RecoverAnId("Paciente", "PacId", "PacId", "" + documentId);
                     GetDocument.SetSuccessfulLoginFlag(true);
                     this.Close();
                 }
