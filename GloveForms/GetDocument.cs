@@ -35,7 +35,7 @@ namespace GloveForms
                 else
                 {
                     this.Hide();
-                    MessageBox.Show(Convert.ToString(documentId));
+                    MessageBox.Show(Convert.ToString(documentId)); // When necessary you should comment this line
                     GetDocument.SetSuccessfulLoginFlag(true);
                     this.Close();
                 }
