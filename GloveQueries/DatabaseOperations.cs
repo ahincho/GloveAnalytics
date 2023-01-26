@@ -26,48 +26,63 @@ namespace GloveQueries
 
             // Database have to contain the Active, Deleted and Playing Status
 
-            sCon.Open();
-            string activeStatus = "INSERT INTO Estado VALUES(1, 'Activo', 1);";
-            mCommand = new SQLiteCommand(activeStatus, sCon);
-            mCommand.ExecuteReader();
-            sCon.Close();
-            InsertRecord(new Status("Eliminado", 1));
-            InsertRecord(new Status("Jugando", 1));
+            int activeStatusId = RecoverAnId("Estado", "EstId", "EstNombre", "Activo");
+            if (activeStatusId == -1)
+            {
+                string insertActiveQuery = "INSERT INTO Estado VALUES(1, 'Activo', 1);";
+                sCon.Open();
+                mCommand = new SQLiteCommand(insertActiveQuery, sCon);
+                mCommand.ExecuteNonQuery();
+                sCon.Close();
+                InsertRecord(new Status("Eliminado", 1));
+                InsertRecord(new Status("Jugando", 1));
+            }
 
         }
 
         public static void InsertRecord(IRecordable newRecord)
         {
 
-            sCon.Open();
             string query = "INSERT INTO " + newRecord.GetTableName() + "(" + newRecord.GetFieldsWithCommas() + ") VALUES(" + newRecord.MergedWithCommas() + ");";
+            sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             mCommand.ExecuteNonQuery();
             sCon.Close();
 
         }
 
-        public static void DeleteRecord(string table, int recordId)
+        public static void DeleteRecord(string table, string int recordId)
         {
-            
 
+            string query = "UPDATE Estado SET EstRegistro = 2 WHERE EstNombre = 'Jugando';";
 
         }
 
         public static int RecoverAnId(string table, string idField, string uniqueField, string uniqueValue)
         {
             
-            int recoveredId = -1;
+            int recoveredId = 0;
+            string query = "SELECT " + idField + " FROM " + table + " WHERE " + uniqueField + " = '" + uniqueValue + "';";
             sCon.Open();
-            string query = "SELECT " + idField + " FROM " + table + " WHERE " + uniqueField + " = " + uniqueValue;
             mCommand = new SQLiteCommand(query, sCon);
-            mDataReader = mCommand.ExecuteReader();
-            if (mDataReader.Read())
+            try
             {
-                recoveredId = int.Parse(Convert.ToString(mDataReader[0]));
+                mDataReader = mCommand.ExecuteReader();
+                if (mDataReader.Read())
+                {
+                    recoveredId = int.Parse(Convert.ToString(mDataReader[0]));
+                }
+                mDataReader.Close();
             }
-            mDataReader.Close();
-            sCon.Close();
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                recoveredId = -1;
+            }
+            finally
+            {
+                sCon.Close();
+            }
             return recoveredId;
 
         }
