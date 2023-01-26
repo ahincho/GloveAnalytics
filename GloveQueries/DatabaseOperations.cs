@@ -20,6 +20,7 @@ namespace GloveQueries
         private readonly static SQLiteConnection sCon = mSql.GetConnection();
         private static SQLiteCommand mCommand;
         private static SQLiteDataReader mDataReader;
+        private static int deleteStatusId;
 
         public static void InitializeDatabase()
         {
@@ -36,6 +37,7 @@ namespace GloveQueries
                 sCon.Close();
                 InsertRecord(new Status("Eliminado", 1));
                 InsertRecord(new Status("Jugando", 1));
+                DatabaseOperations.deleteStatusId = RecoverAnId("Estado", "EstId", "EstNobmre", "Eliminado");
             }
 
         }
@@ -51,10 +53,14 @@ namespace GloveQueries
 
         }
 
-        public static void DeleteRecord(string table, int recordId)
+        public static void DeleteRecord(string table, string stateField, string idField, string idValue)
         {
 
-            string query = "UPDATE Estado SET EstEstado = 2 WHERE EstNombre = 'Jugando';";
+            string query = "UPDATE " + table + " SET " + stateField + " = " + DatabaseOperations.deleteStatusId + " WHERE " + idField + " = '" + idValue + "';";
+            sCon.Open();
+            mCommand = new SQLiteCommand(query, sCon);
+            mCommand.ExecuteNonQuery();
+            sCon.Close();
 
         }
 
