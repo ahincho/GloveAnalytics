@@ -18,7 +18,7 @@ namespace GloveClasses
         private readonly static string Table = "Estado";
         private string Name;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "EstNombre", "EstRegistro" };
+        private readonly static List<string> Fields = new List<string>() { "EstNombre", "EstEstado" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
