@@ -36,7 +36,7 @@ CREATE TABLE Medic (
 	MedSpecialism INTEGER NOT NULL,
 	MedStatus INTEGER NOT NULL,
 	FOREIGN KEY (MedId) REFERENCES Person(PerId),
-	FOREIGN KEY (MedSpecialism) REFERENCES Specialism(EspId),
+	FOREIGN KEY (MedSpecialism) REFERENCES Specialism(SpeId),
 	FOREIGN KEY (MedStatus) REFERENCES Status(StaId)
 );
 
@@ -56,7 +56,7 @@ CREATE TABLE Patient (
 	PatStatus INTEGER NOT NULL,
 	FOREIGN KEY (PatId) REFERENCES Person(PerId),
 	FOREIGN KEY (PatDiagnosis) REFERENCES Diagnosis(DiaId),
-	FOREIGN KEY (PatStatus) REFERENCES Status(Status)
+	FOREIGN KEY (PatStatus) REFERENCES Status(StaId)
 );
 
 CREATE TABLE Session (
@@ -66,12 +66,7 @@ CREATE TABLE Session (
 	SesTime REAL NOT NULL,
 	SesMeters REAL NOT NULL,
 	SesCoins INTEGER NOT NULL,
-	SesFails INTEGER,
-	SesAngPulgar REAL NOT NULL,
-	SesAngIndice REAL NOT NULL,
-	SesAngMedio REAL NOT NULL,
-	SesAngAnular REAL NOT NULL,
-	SesAngMenique REAL NOT NULL,
+	SesFails INTEGER NOT NULL,
 	SesStatus INTEGER NOT NULL,
 	FOREIGN KEY (SesPatientId) REFERENCES Patient(PatId),
 	FOREIGN KEY (SesStatus) REFERENCES Status(StaId)
@@ -79,7 +74,7 @@ CREATE TABLE Session (
 
 CREATE TABLE MotionType (
 	MotId INTEGER PRIMARY KEY AUTOINCREMENT,
-	MotName TEXT(24) NOT NULL,
+	MotName TEXT(24) UNIQUE NOT NULL,
 	MotDescription TEXT(36) NOT NULL,
 	MotStatus INTEGER NOT NULL,
 	FOREIGN KEY (MotStatus) REFERENCES Status(StaId)
@@ -87,6 +82,7 @@ CREATE TABLE MotionType (
 
 CREATE TABLE HandMotion (
 	HanId INTEGER PRIMARY KEY AUTOINCREMENT,
+	HanSessionId INTEGER NOT NULL,
 	HanThumbAngle REAL NOT NULL,
 	HanIndexAngle REAL NOT NULL,
 	HanMiddleAngle REAL NOT NULL,
@@ -94,6 +90,7 @@ CREATE TABLE HandMotion (
 	HanPinkyAngle REAL NOT NULL,
 	HanMotionType INTEGER NOT NULL,
 	HanStatus INTEGER NOT NULL,
+	FOREIGN KEY (HanSessionId) REFERENCES Session(SesId),
 	FOREIGN KEY (HanMotionType) REFERENCES MotionType(MotId),
 	FOREIGN KEY (HanStatus) REFERENCES Status(StaId)
 );
