@@ -88,7 +88,7 @@ namespace GloveClasses
         public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
-            this.DataSummary.Add(currentStatus);
+            this.DataSummary.Add(currentStatus.ToString());
         }
 
         // Getters for Hand Motion Class
