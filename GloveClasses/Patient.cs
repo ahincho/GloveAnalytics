@@ -15,13 +15,13 @@ namespace GloveClasses
 
         // Attributes of Patient Class
 
-        private readonly static string Table = "Paciente";
+        private readonly static string Table = "Patient";
         private int Id;
         private string AdmissionDate;
         private int Diagnosis;
         private string Comment;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "PacId", "PacFechaIngreso", "PacDiagnostico", "PacObservaciones", "PacEstado" };
+        private readonly static List<string> Fields = new List<string>() { "PatId", "PatAdmissionDate", "PatDiagnosis", "PatComment", "PatStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors

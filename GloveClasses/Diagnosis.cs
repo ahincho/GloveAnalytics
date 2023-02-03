@@ -16,11 +16,11 @@ namespace GloveClasses
 
         // Attributes of Diagnosis Class
 
-        private readonly static string Table = "Diagnostico";
+        private readonly static string Table = "Diagnosis";
         private string Name;
         private string Description;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "DiagNombre", "DiagDescripcion", "DiagEstado" };
+        private readonly static List<string> Fields = new List<string>() { "DiaName", "DiaDescription", "DiaStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors

@@ -10,32 +10,44 @@ namespace GloveClasses
 {
 
     # pragma warning disable IDE0090
-    public class HandAngles : IRecordable
+    public class HandMotion : IRecordable
     {
 
-        // Attributes of Hand Angles Class
+        // Attributes of Hand Motion Class
 
-        private readonly static string Table = "Angulos";
+        private readonly static string Table = "HandMotion";
+        private int SessionId;
         private float ThumbAngle;
         private float IndexAngle;
         private float MiddleAngle;
         private float RingAngle;
         private float PinkyAngle;
-        private readonly static List<string> Fields = new List<string>() { "SesAngPulgar", "SesAngIndice", "SesAngMedio", "SesAngAnular", "SesAngMenique" };
+        private int MotionType;
+        private int CurrentStatus;
+        private readonly static List<string> Fields = new List<string>() { "HanSessionId", "HanThumbAngle", "HanIndexAngle", "HanMiddleAngle", "HanRingAngle", "HanPinkyAngle", "HanMotionType", "HanStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
-        public HandAngles(float thumb, float index, float middle, float ring, float pinky)
+        public HandMotion(int sessionId, float thumbAngle, float indexAngle, float middleAngle, float ringAngle, float pinkyAngle, int motionType, int currentStatus)
         {
-            SetThumbAngle(thumb);
-            SetIndexAngle(index);
-            SetMiddleAngle(middle);
-            SetRingAngle(ring);
-            SetPinkyAngle(pinky);
+            SetSessionId(sessionId);
+            SetThumbAngle(thumbAngle);
+            SetIndexAngle(indexAngle);
+            SetMiddleAngle(middleAngle);
+            SetRingAngle(ringAngle);
+            SetPinkyAngle(pinkyAngle);
+            SetMotionType(motionType);
+            SetCurrentStatus(currentStatus);
         }
 
-        // Setters for Hand Angles Class
+        // Setters for Hand Motion Class
+
+        public void SetSessionId(int sessionId)
+        {
+            this.SessionId = sessionId;
+            this.DataSummary.Add(sessionId.ToString());
+        }
 
         public void SetThumbAngle(float thumbAngle)
         {
@@ -67,7 +79,24 @@ namespace GloveClasses
             this.DataSummary.Add(pinkyAngle.ToString());
         }
 
-        // Getters for Hand Angles Class
+        public void SetMotionType(int motionType)
+        {
+            this.MotionType = motionType;
+            this.DataSummary.Add(motionType.ToString());
+        }
+
+        public void SetCurrentStatus(int currentStatus)
+        {
+            this.CurrentStatus = currentStatus;
+            this.DataSummary.Add(currentStatus);
+        }
+
+        // Getters for Hand Motion Class
+
+        public int GetSessionId()
+        {
+            return this.SessionId;
+        }
 
         public float GetThumbAngle()
         {
@@ -94,6 +123,16 @@ namespace GloveClasses
             return this.PinkyAngle;
         }
 
+        public int GetMotionType()
+        {
+            return this.MotionType;
+        }
+
+        public int GetCurrentStatus()
+        {
+            return this.CurrentStatus;
+        }
+
         private List<string> GetDataSummary()
         {
             return this.DataSummary;
@@ -101,14 +140,14 @@ namespace GloveClasses
 
         private static List<string> GetFields()
         {
-            return HandAngles.Fields;
+            return HandMotion.Fields;
         }
 
         // Method which returns the name of the table associated
 
         public string GetTableName()
         {
-            return HandAngles.Table;
+            return HandMotion.Table;
         }
 
         // Method to concatenate all the Class Fields. Useful when

@@ -15,12 +15,12 @@ namespace GloveClasses
 
         // Attributes of Medic Class
 
-        private readonly static string Table = "Medico";
+        private readonly static string Table = "Medic";
         private int Id;
         private string EntryDate;
         private int Specialism;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "MedId", "MedFechaIngreso", "MedEspecialidad", "MedEstado" };
+        private readonly static List<string> Fields = new List<string>() { "MedId", "MedEntryDate", "MedSpecialism", "MedStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors

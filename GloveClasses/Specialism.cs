@@ -15,10 +15,10 @@ namespace GloveClasses
 
         // Attributes of Specialism Class
 
-        private readonly static string Table = "Especialidad";
+        private readonly static string Table = "Specialism";
         private string Name;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "EspNombre", "EspEstado" };
+        private readonly static List<string> Fields = new List<string>() { "SpeName", "SpeStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors

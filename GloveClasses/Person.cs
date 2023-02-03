@@ -16,7 +16,7 @@ namespace GloveClasses
 
         // Attributes of Person Class
 
-        private readonly static string Table = "Persona";
+        private readonly static string Table = "Person";
         private string Name;
         private string Lastname;
         private string Dni;
@@ -25,7 +25,7 @@ namespace GloveClasses
         private string Email;
         private string Address;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "PerNombre", "PerApellido", "PerDni", "PerFechaNac", "PerTelefono", "PerCorreo", "PerDireccion", "PerEstado" };
+        private readonly static List<string> Fields = new List<string>() { "PerName", "PerLastname", "PerDocument", "PerBirthday", "PerPhoneNumber", "PerEmail", "PerAddress", "PerStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors

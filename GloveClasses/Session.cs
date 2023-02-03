@@ -16,38 +16,36 @@ namespace GloveClasses
 
         // Attributes of Session Class
 
-        private readonly static string Table = "Sesion";
-        private int Patient;
+        private readonly static string Table = "Session";
+        private int PatientId;
         private string Date;
         private float Time;
         private float Meters;
         private int Coins;
         private int Fails;
-        private HandAngles Angles;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "SesPacienteId", "SesFecha", "SesTiempo", "SesMetros", "SesMonedas", "SesFallos", HandAngles.GetClassFields(), "SesEstado"};
+        private readonly static List<string> Fields = new List<string>() { "SesPatientId", "SesDate", "SesTime", "SesMeters", "SesCoins", "SesFails", "SesStatus"};
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
-        public Session(int patient, string date, float time, float meters, int coins, int fails, HandAngles angles, int currentStatus)
+        public Session(int patientId, string date, float time, float meters, int coins, int fails, int currentStatus)
         {
-            SetPatient(patient);
+            SetPatientId(patientId);
             SetDate(date);
             SetTime(time);
             SetMeters(meters);
             SetCoins(coins);
             SetFails(fails);
-            SetHandAngles(angles);
             SetCurrentStatus(currentStatus);
         }
 
         // Setters for Session Class
 
-        public void SetPatient(int patient)
+        public void SetPatientId(int patientId)
         {
-            this.Patient = patient;
-            this.DataSummary.Add(patient.ToString());
+            this.PatientId = patientId;
+            this.DataSummary.Add(patientId.ToString());
         }
 
         public void SetDate(string date)
@@ -80,12 +78,6 @@ namespace GloveClasses
             this.DataSummary.Add(fails.ToString());
         }
 
-        public void SetHandAngles(HandAngles angles)
-        {
-            this.Angles = angles;
-            this.DataSummary.Add(angles.MergedWithCommas());
-        }
-
         public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
@@ -94,9 +86,9 @@ namespace GloveClasses
 
         // Getters for Session Class
 
-        public int GetPatient()
+        public int GetPatientId()
         {
-            return this.Patient;
+            return this.PatientId;
         }
 
         public string GetDate()
@@ -122,11 +114,6 @@ namespace GloveClasses
         public int GetFails()
         {
             return this.Fails;
-        }
-
-        public HandAngles GetHandAngles()
-        {
-            return this.Angles;
         }
 
         public int GetCurrentStatus()

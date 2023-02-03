@@ -10,31 +10,39 @@ namespace GloveClasses
 {
 
     # pragma warning disable CS8618, IDE0090
-    public class Status : IRecordable
+    public class MotionType : IRecordable
     {
 
-        // Attributes of Status Class
+        // Attributes of MotionType Class
 
-        private readonly static string Table = "Status";
+        private readonly static string Table = "MotionType";
         private string Name;
+        private string Description;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "StaName", "StaStatus" };
+        private readonly static List<string> Fields = new List<string>() { "MotName", "MotDescription", "MotStatus" };
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
-        public Status(string name, int currentStatus)
+        public MotionType(string name, string description, int currentStatus)
         {
             SetName(name);
+            SetDescription(description);
             SetCurrentStatus(currentStatus);
         }
 
-        // Setters for Status Class
+        // Setters for MotionType Class
 
         public void SetName(string name)
         {
             this.Name = name;
-            this.DataSummary.Add("'" + name.ToString() + "'");
+            this.DataSummary.Add(name.ToString());
+        }
+
+        public void SetDescription(string description)
+        {
+            this.Description = description;
+            this.DataSummary.Add(description.ToString());
         }
 
         public void SetCurrentStatus(int currentStatus)
@@ -43,11 +51,16 @@ namespace GloveClasses
             this.DataSummary.Add(currentStatus.ToString());
         }
 
-        // Getters for Status Class
+        // Getters for MotionType Class
 
         public string GetName()
         {
             return this.Name;
+        }
+
+        public string GetDescription()
+        {
+            return this.Description;
         }
 
         public int GetCurrentStatus()
@@ -62,14 +75,14 @@ namespace GloveClasses
 
         private static List<string> GetFields()
         {
-            return Status.Fields;
+            return MotionType.Fields;
         }
 
         // Method which returns the name of the table associated
-        
+
         public string GetTableName()
         {
-            return Status.Table;
+            return MotionType.Table;
         }
 
         // Method to concatenate all the Class Fields. Useful when
@@ -85,7 +98,8 @@ namespace GloveClasses
 
         public string MergedWithCommas()
         {
-            return string.Join<Object>(", ", GetDataSummary());
+            string merged = string.Join<Object>(", ", GetDataSummary());
+            return merged;
         }
 
     }
