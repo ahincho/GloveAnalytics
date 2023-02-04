@@ -17,7 +17,6 @@ namespace GloveForms
             ApplicationConfiguration.Initialize();
             DatabaseOperations.InitializeDatabase();
             Application.Run(new MainScreen());
-            DatabaseOperations.DeleteRecord("Estado", "EstEstado", "EstId", "" + DatabaseOperations.RecoverAnId("Estado", "EstId", "EstNombre", "EstNombre"));
 
         }
     }
