@@ -36,13 +36,13 @@ namespace GloveClasses
         public void SetName(string name)
         {
             this.Name = name;
-            this.DataSummary.Add(name.ToString());
+            this.DataSummary.Add("'" + name.ToString() + "'");
         }
 
         public void SetDescription(string description)
         {
             this.Description = description;
-            this.DataSummary.Add(description.ToString());
+            this.DataSummary.Add("'" + description.ToString() + "'");
         }
 
         public void SetCurrentStatus(int currentStatus)
