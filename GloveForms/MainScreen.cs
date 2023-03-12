@@ -61,5 +61,28 @@ namespace GloveForms
 
         }
 
+        private void StatisticsButton_Click(object sender, EventArgs e)
+        {
+            
+            GetDocument documentForm = new GetDocument();
+            documentForm.Dock = DockStyle.Fill;
+            documentForm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
+            documentForm.ShowDialog();
+            if (GetDocument.GetSuccessfulLoginFlag())
+            {
+                documentForm.Close();
+                StatisticsScreen statisticsScreen = new StatisticsScreen();
+                statisticsScreen.Dock = DockStyle.Fill;
+                statisticsScreen.StartPosition = FormStartPosition.CenterScreen;
+                statisticsScreen.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                this.Show();
+            }
+
+        }
     }
 }

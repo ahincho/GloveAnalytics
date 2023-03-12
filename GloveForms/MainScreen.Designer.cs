@@ -33,6 +33,7 @@
             this.SignUpButton = new System.Windows.Forms.Button();
             this.OptionsButton = new System.Windows.Forms.Button();
             this.CreditsButton = new System.Windows.Forms.Button();
+            this.StatisticsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -100,6 +101,21 @@
             this.CreditsButton.TabIndex = 3;
             this.CreditsButton.UseVisualStyleBackColor = false;
             // 
+            // StatisticsButton
+            // 
+            this.StatisticsButton.BackColor = System.Drawing.Color.Transparent;
+            this.StatisticsButton.BackgroundImage = global::GloveForms.Properties.Resources.StatisticsButton;
+            this.StatisticsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.StatisticsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StatisticsButton.FlatAppearance.BorderSize = 0;
+            this.StatisticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatisticsButton.Location = new System.Drawing.Point(1194, 338);
+            this.StatisticsButton.Name = "StatisticsButton";
+            this.StatisticsButton.Size = new System.Drawing.Size(48, 48);
+            this.StatisticsButton.TabIndex = 4;
+            this.StatisticsButton.UseVisualStyleBackColor = false;
+            this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -107,6 +123,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::GloveForms.Properties.Resources.MainScreenBackground;
             this.ClientSize = new System.Drawing.Size(1264, 716);
+            this.Controls.Add(this.StatisticsButton);
             this.Controls.Add(this.CreditsButton);
             this.Controls.Add(this.OptionsButton);
             this.Controls.Add(this.SignUpButton);
@@ -127,5 +144,6 @@
         private Button SignUpButton;
         private Button OptionsButton;
         private Button CreditsButton;
+        private Button StatisticsButton;
     }
 }

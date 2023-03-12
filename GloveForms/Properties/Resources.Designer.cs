@@ -103,6 +103,16 @@ namespace GloveForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MainScreenWithoutIcons {
+            get {
+                object obj = ResourceManager.GetObject("MainScreenWithoutIcons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OptionsButton {
             get {
                 object obj = ResourceManager.GetObject("OptionsButton", resourceCulture);
@@ -146,6 +156,16 @@ namespace GloveForms.Properties {
         internal static System.Drawing.Bitmap SignUpButton {
             get {
                 object obj = ResourceManager.GetObject("SignUpButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StatisticsButton {
+            get {
+                object obj = ResourceManager.GetObject("StatisticsButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
