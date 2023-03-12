@@ -37,11 +37,19 @@ namespace GloveForms
                 }
                 else
                 {
-                    this.Hide();
-                    MessageBox.Show(Convert.ToString(documentId)); // When necessary you should comment this line
-                    int patientId = DatabaseOperations.RecoverAnId("Paciente", "PacId", "PacId", "" + documentId);
-                    GetDocument.SetSuccessfulLoginFlag(true);
-                    this.Close();
+                    // MessageBox.Show(Convert.ToString(documentId)); // When necessary you should comment this line
+                    int personId = DatabaseOperations.RecoverAnId("Person", "PerId", "PerDocument", "" + documentId);
+                    int patientId = DatabaseOperations.RecoverAnId("Patient", "PatId", "PatId", "" + personId);
+                    if (patientId == -1)
+                    {
+                        MessageBox.Show("Usuario no registrado!", "Ingresar Documento!", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        this.Hide();
+                        GetDocument.SetSuccessfulLoginFlag(true);
+                        this.Close();
+                    }
                 }
                 ClearField();
             }

@@ -53,7 +53,7 @@ namespace GloveQueries
                 DatabaseOperations.InsertRecord(new MotionType("Flexion de Anular", "Movimiento del dedo anular", DatabaseOperations.activeStatusId));
                 DatabaseOperations.InsertRecord(new MotionType("Flexion de Menique", "Movimiento del dedo menique", DatabaseOperations.activeStatusId));
                 // Adding a General User for our application
-                DatabaseOperations.InsertRecord(new Person("Admin", "Admin", "Admin123456", "04/02/2023", "123456789", "admin@citesoft.com", "Citesoft", DatabaseOperations.activeStatusId));
+                DatabaseOperations.InsertRecord(new Person("Admin", "Admin", "123456", "04/02/2023", "123456789", "admin@citesoft.com", "Citesoft", DatabaseOperations.activeStatusId));
                 int adminUser = DatabaseOperations.RecoverAnId("Person", "PerId", "PerName", "Admin");
                 // Adding a new Medic using the Admin User
                 DatabaseOperations.InsertRecord(new Medic(adminUser, "04/02/2023", generalSpecialism, DatabaseOperations.activeStatusId));

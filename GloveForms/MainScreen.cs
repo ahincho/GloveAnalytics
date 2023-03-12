@@ -44,8 +44,8 @@ namespace GloveForms
                 Application.Exit();
                 // We need to give the path directory of the exec application for our videogame
                 // Here i'm trying to execute the DB Browser for SQLite
-                string browser = "C:/Program Files/DB Browser for SQLite/DB Browser for SQLite.exe";
-                System.Diagnostics.Process.Start(browser);
+                // string browser = "C:/Program Files/DB Browser for SQLite/DB Browser for SQLite.exe";
+                // System.Diagnostics.Process.Start(browser);
             }
             else
             {
