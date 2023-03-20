@@ -13,7 +13,7 @@ namespace GloveDatabase
     class Program
     {
         
-        static void Main(string[] args)
+        static void Main()
         {
 
             // This is a pretty and quick testing of the SQLConnection

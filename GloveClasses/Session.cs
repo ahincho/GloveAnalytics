@@ -23,13 +23,14 @@ namespace GloveClasses
         private float Meters;
         private int Coins;
         private int Fails;
+        private int Difficulty;
         private int CurrentStatus;
-        private readonly static List<string> Fields = new List<string>() { "SesPatientId", "SesDate", "SesTime", "SesMeters", "SesCoins", "SesFails", "SesStatus"};
+        private readonly static List<string> Fields = new List<string>() { "SesPatientId", "SesDate", "SesTime", "SesMeters", "SesCoins", "SesFails", "SesDifficulty", "SesStatus"};
         private readonly List<string> DataSummary = new List<string>();
 
         // Class Constructors
 
-        public Session(int patientId, string date, float time, float meters, int coins, int fails, int currentStatus)
+        public Session(int patientId, string date, float time, float meters, int coins, int fails, int difficulty, int currentStatus)
         {
             SetPatientId(patientId);
             SetDate(date);
@@ -37,6 +38,7 @@ namespace GloveClasses
             SetMeters(meters);
             SetCoins(coins);
             SetFails(fails);
+            SetDifficulty(difficulty);
             SetCurrentStatus(currentStatus);
         }
 
@@ -78,6 +80,12 @@ namespace GloveClasses
             this.DataSummary.Add(fails.ToString());
         }
 
+        public void SetDifficulty(int difficulty)
+        {
+            this.Difficulty = difficulty;
+            this.DataSummary.Add(difficulty.ToString());
+        }
+
         public void SetCurrentStatus(int currentStatus)
         {
             this.CurrentStatus = currentStatus;
@@ -114,6 +122,11 @@ namespace GloveClasses
         public int GetFails()
         {
             return this.Fails;
+        }
+
+        public int GetDifficulty()
+        {
+            return this.Difficulty;
         }
 
         public int GetCurrentStatus()

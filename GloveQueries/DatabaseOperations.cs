@@ -1,18 +1,18 @@
 ﻿
-using GloveClasses;
-using GloveDatabase;
-using GloveInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GloveClasses;
+using GloveDatabase;
+using GloveInterfaces;
 
 namespace GloveQueries
 {
 
-    #pragma warning disable CS8618, CS8604, IDE0090
+    # pragma warning disable CS8618, CS8604, IDE0090
     public class DatabaseOperations
     {
 
@@ -25,9 +25,7 @@ namespace GloveQueries
 
         public static void InitializeDatabase()
         {
-
             // Database have to contain the Active, Deleted and Playing Status
-
             DatabaseOperations.activeStatusId = RecoverAnId("Status", "StaId", "StaName", "Activo");
             if (DatabaseOperations.activeStatusId == -1)
             {
@@ -52,6 +50,12 @@ namespace GloveQueries
                 DatabaseOperations.InsertRecord(new MotionType("Flexion de Medio", "Movimiento del dedo medio", DatabaseOperations.activeStatusId));
                 DatabaseOperations.InsertRecord(new MotionType("Flexion de Anular", "Movimiento del dedo anular", DatabaseOperations.activeStatusId));
                 DatabaseOperations.InsertRecord(new MotionType("Flexion de Menique", "Movimiento del dedo menique", DatabaseOperations.activeStatusId));
+                // Adding the levels of the game
+                DatabaseOperations.InsertRecord(new GameDifficulty("Facil", DatabaseOperations.activeStatusId));
+                DatabaseOperations.InsertRecord(new GameDifficulty("Normal", DatabaseOperations.activeStatusId));
+                DatabaseOperations.InsertRecord(new GameDifficulty("Dificil", DatabaseOperations.activeStatusId));
+                // Adding the default config to play
+                DatabaseOperations.InsertRecord(new GameConfig(0, 0, 0, "0"));
                 // Adding a General User for our application
                 DatabaseOperations.InsertRecord(new Person("Admin", "Admin", "123456", "04/02/2023", "123456789", "admin@citesoft.com", "Citesoft", DatabaseOperations.activeStatusId));
                 int adminUser = DatabaseOperations.RecoverAnId("Person", "PerId", "PerName", "Admin");
@@ -61,34 +65,28 @@ namespace GloveQueries
                 DatabaseOperations.InsertRecord(new Patient(adminUser, "04/02/2023", generalDiagnosis, "Admin probando la aplicacion", DatabaseOperations.activeStatusId));
             }
             DatabaseOperations.deletedStatusId = RecoverAnId("Status", "StaId", "StaNombre", "Eliminado");
-
         }
 
         public static void InsertRecord(IRecordable newRecord)
         {
-
             string query = "INSERT INTO " + newRecord.GetTableName() + "(" + newRecord.GetFieldsWithCommas() + ") VALUES(" + newRecord.MergedWithCommas() + ");";
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             mCommand.ExecuteNonQuery();
             sCon.Close();
-
         }
 
         public static void DeleteRecord(string table, string stateField, string idField, string idValue)
         {
-
             string query = "UPDATE " + table + " SET " + stateField + " = " + DatabaseOperations.deletedStatusId + " WHERE " + idField + " = '" + idValue + "';";
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             mCommand.ExecuteNonQuery();
             sCon.Close();
-
         }
 
         public static int RecoverAnId(string table, string idField, string uniqueField, string uniqueValue)
         {
-            
             int recoveredId = -1;
             string query = "SELECT " + idField + " FROM " + table + " WHERE " + uniqueField + " = '" + uniqueValue + "';";
             sCon.Open();
@@ -112,7 +110,6 @@ namespace GloveQueries
                 sCon.Close();
             }
             return recoveredId;
-
         }
 
     }

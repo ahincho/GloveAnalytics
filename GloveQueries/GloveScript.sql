@@ -43,7 +43,7 @@ CREATE TABLE Medic (
 CREATE TABLE Diagnosis (
 	DiaId INTEGER PRIMARY KEY AUTOINCREMENT,
 	DiaName TEXT(40) UNIQUE NOT NULL,
-	DiaDescription TEXT (120) NOT NULL,
+	DiaDescription TEXT(120) NOT NULL,
 	DiaStatus INTEGER NOT NULL,
 	FOREIGN KEY (DiaStatus) REFERENCES Status(StaId)
 );
@@ -59,6 +59,13 @@ CREATE TABLE Patient (
 	FOREIGN KEY (PatStatus) REFERENCES Status(StaId)
 );
 
+CREATE TABLE GameDifficulty (
+	DifId INTEGER PRIMARY KEY AUTOINCREMENT,
+	DifName TEXT(16) NOT NULL,
+	DifStatus INTEGER NOT NULL,
+	FOREIGN KEY (DifStatus) REFERENCES Status(StaId)
+);
+
 CREATE TABLE Session (
 	SesId INTEGER PRIMARY KEY AUTOINCREMENT,
 	SesPatientId INTEGER NOT NULL,
@@ -67,8 +74,10 @@ CREATE TABLE Session (
 	SesMeters REAL NOT NULL,
 	SesCoins INTEGER NOT NULL,
 	SesFails INTEGER NOT NULL,
+	SesDifficulty INTEGER NOT NULL,
 	SesStatus INTEGER NOT NULL,
 	FOREIGN KEY (SesPatientId) REFERENCES Patient(PatId),
+	FOREIGN KEY (SesDifficulty) REFERENCES GameDifficulty(DifId),
 	FOREIGN KEY (SesStatus) REFERENCES Status(StaId)
 );
 
@@ -93,4 +102,11 @@ CREATE TABLE HandMotion (
 	FOREIGN KEY (HanSessionId) REFERENCES Session(SesId),
 	FOREIGN KEY (HanMotionType) REFERENCES MotionType(MotId),
 	FOREIGN KEY (HanStatus) REFERENCES Status(StaId)
+);
+
+CREATE TABLE GameConfig (
+	ConId INTEGER NOT NULL,
+	PatId INTEGER NOT NULL,
+	Difficulty INTEGER NOT NULL,
+	SesDate TEXT(16) NOT NULL
 );
