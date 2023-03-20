@@ -2,7 +2,6 @@
 namespace GloveInterfaces
 {
 
-    # pragma warning disable CA1845, IDE0057
     public interface IRecordable
     {
 
