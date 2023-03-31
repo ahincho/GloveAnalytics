@@ -19,15 +19,12 @@ namespace GloveForms
         
         public PatientSignUp()
         {
-            
             InitializeComponent();
             this.InitializeTextBoxGroup();
-
         }
 
         private void SaveRecordButton_Click(object sender, EventArgs e)
         {
-            
             if (this.FieldsAreEmpty())
             {
                 MessageBox.Show("Debe completar la información solicitada!", "Tiene campos en blanco!", MessageBoxButtons.OK);
@@ -37,29 +34,25 @@ namespace GloveForms
                 Person aPerson = this.CreatePersonFromFields();
                 DatabaseOperations.InsertRecord(aPerson);
                 // MessageBox.Show(aPerson.mergedWithCommas());
-                int personId = DatabaseOperations.RecoverAnId(aPerson.GetTableName(), "PerId", "PerDni", aPerson.GetDni());
+                int personId = DatabaseOperations.RecoverAnId(aPerson.GetTableName(), "PerId", "PerDocument", aPerson.GetDni());
                 Patient aPatient = this.CreatePatientFromFields(personId);
                 DatabaseOperations.InsertRecord(aPatient);
                 // MessageBox.Show(aPatient.mergedWithCommas());
                 MessageBox.Show("Se ha registrado un nuevo paciente!", "Paciente Registrado!", MessageBoxButtons.OK);
                 this.CleanFields();
             }
-
         }
 
         private void CleanFields()
         {
-
             foreach (TextBox tb in MyTextBoxGroup)
             {
                 tb.Text = "";
             }
-
         }
 
         private bool FieldsAreEmpty()
         {
-
             foreach (TextBox tb in MyTextBoxGroup)
             {
                 if (tb.Text.Length == 0)
@@ -68,12 +61,10 @@ namespace GloveForms
                 }
             }
             return false;
-
         }
 
         private Person CreatePersonFromFields()
         {
-
             string name = this.NameTextBox.Text;
             string lastname = this.LastnameTextBox.Text;
             string document = this.DocumentTextBox.Text;
@@ -81,25 +72,19 @@ namespace GloveForms
             string phoneNumber = this.PhoneTextBox.Text;
             string email = this.EmailTextBox.Text;
             string address = this.AddressTextBox.Text;
-
             return new Person(name, lastname, document, birthday, phoneNumber, email, address, 1);
-
         }
 
         private Patient CreatePatientFromFields(int personId)
         {
-
             string admissionDate = this.AdmissionTextBox.Text;
             int diagnosis = Convert.ToInt32(this.DiagnosisTextBox.Text);
             string comment = this.CommentTextBox.Text;
-            
             return new Patient(personId, admissionDate, diagnosis, comment, 1);
-
         }
 
         private void InitializeTextBoxGroup()
         {
-
             //
             // MyTextBoxGroup
             // 
@@ -113,8 +98,8 @@ namespace GloveForms
             this.MyTextBoxGroup.Add(AdmissionTextBox);
             this.MyTextBoxGroup.Add(DiagnosisTextBox);
             this.MyTextBoxGroup.Add(CommentTextBox);
-
         }
 
     }
+
 }

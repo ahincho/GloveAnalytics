@@ -9,25 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GloveQueries;
-using GloveClasses;
 
 namespace GloveForms
 {
     public partial class GetDocument : Form
     {
         
-        private static bool SuccessfulLogin = false;
+        private static bool SuccessfulLogin;
+        private int PatientId;
 
         public GetDocument()
         {
-
+            SetSuccessfulLoginFlag(false);
             InitializeComponent();
-
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
             if (!FieldIsEmpty())
             {
                 bool isInt = Int32.TryParse(DocumentTextBox.Text, out int documentId);
@@ -47,6 +45,7 @@ namespace GloveForms
                     else
                     {
                         this.Hide();
+                        this.SetPatientId(patientId);
                         GetDocument.SetSuccessfulLoginFlag(true);
                         this.Close();
                     }
@@ -57,35 +56,36 @@ namespace GloveForms
             {
                 MessageBox.Show("Por favor, ingrese su documento", "Ingresar Documento!", MessageBoxButtons.OK);
             }
-
         }
 
         private bool FieldIsEmpty()
         {
-
             return DocumentTextBox.Text.Length == 0;
-
         }
 
         private void ClearField()
         {
-
             DocumentTextBox.Text = "";
-
         }
 
         private static void SetSuccessfulLoginFlag(bool flag)
         {
-
             GetDocument.SuccessfulLogin = flag;
-
         }
 
         public static bool GetSuccessfulLoginFlag()
         {
-
             return GetDocument.SuccessfulLogin;
+        }
 
+        private void SetPatientId(int patientId)
+        {
+            this.PatientId = patientId;
+        }
+
+        public int GetPatientId()
+        {
+            return this.PatientId;
         }
 
     }
