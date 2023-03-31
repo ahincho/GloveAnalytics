@@ -158,10 +158,34 @@ namespace GloveQueries
             return coinsAvg;
         }
 
-    }
 
-    public static double RecoverAnglesOfSession(int patientId, int sessionId)
-    {
+        public static double RecoverAngleOfSession(int sessionId, int motionType)
+        {
+            List<string> fingersAngle = ["Thumb", "Index", "Middle", "Ring", "Pinky"];
+            string query = "SELECT ROUND(AVG(Han" + fingersAngle[motionType - 1] + "Angle), 2) FROM HandMotion WHERE HanSessionId = " + sessionId + " AND HanMotionType = " + motionType;
+            double angleAvg = -1;
+            sCon.Open();
+            mCommand = new SQLiteCommand(query, sCon);
+            try
+            {
+                mDataReader = mCommand.ExecuteReader();
+                while (mDataReader.Read())
+                {
+                    angleAvg = Math.Round(Convert.ToDouble(mDataReader[0]));
+                }
+                mDataReader.Close();
+                return angleAvg;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                sCon.Close();
+            }
+            return angleAvg;
+        }
 
     }
 
