@@ -21,26 +21,32 @@ namespace GloveForms
 
         private int PatientId;
         private List<int> SessionsIds = new List<int>();
-        private int InvolvedSessions = 4;
+        private int InvolvedSessions;
 
         public StatisticsScreen(int patientId)
         {
             InitializeComponent();
             SetPatientId(patientId);
             SetSessionIds();
-            textBox1.Text = this.PatientId.ToString();
+            PatientIdOut.Text = this.PatientId.ToString();
             MetersBarGraph();
             CoinsBarGraph();
+            AnglesDataGrid();
         }
 
-        public void SetPatientId(int patientId)
+        private void SetPatientId(int patientId)
         {
             this.PatientId = patientId;
         }
 
-        public int GetPatientId()
+        private int GetPatientId()
         {
             return this.PatientId;
+        }
+
+        private void SetInvolvedSessions(int involvedSessions)
+        {
+            this.InvolvedSessions = involvedSessions;
         }
 
         private void SetSessionIds()
@@ -49,7 +55,7 @@ namespace GloveForms
             for (int i = 0 ; i < l.Count ; i++)
             {
                 SessionsIds.Add(l.ElementAt(i));
-                this.listBox1.Items.Add(l.ElementAt(i));
+                this.IdsSessions.Items.Add(l.ElementAt(i));
             }
         }
 
@@ -83,7 +89,7 @@ namespace GloveForms
             plt.Title("Meters VS Sessions");
 
             plt.SaveFig("bar_labels1.png");
-            pictureBox3.ImageLocation = "bar_labels1.png";
+            MetersBySession.ImageLocation = "bar_labels1.png";
         }
 
         private void CoinsBarGraph()
@@ -116,12 +122,34 @@ namespace GloveForms
             plt.Title("Coins VS Sessions");
 
             plt.SaveFig("bar_labels2.png");
-            pictureBox4.ImageLocation = "bar_labels2.png";
+            CoinsBySession.ImageLocation = "bar_labels2.png";
         }
-        
+
         private void AnglesDataGrid()
         {
+            List<string> fingers = new List<string> { "Thumb", "Index", "Middle", "Ring", "Pinky" };
+            // dataGridView1.Columns.Add("AlAzar", "Al Azar");
+            List<double> thumbAngles = AnglesByFinger(InvolvedSessions, 1);
+            List<double> indexAngles = AnglesByFinger(InvolvedSessions, 2);
+            List<double> middleAngles = AnglesByFinger(InvolvedSessions, 3);
+            List<double> ringAngles = AnglesByFinger(InvolvedSessions, 4);
+            List<double> pinkyAngles = AnglesByFinger(InvolvedSessions, 5);
+            List<List<double>> fa = new List<List<double>> { thumbAngles, indexAngles, middleAngles, ringAngles, pinkyAngles };
+            for (int i = 0; i < fingers.Count; i++)
+            {
+                AnglesTable.Rows.Add(fingers[i], fa[i][0], fa[i][1], fa[i][2], fa[i][3]);
+            }
+            AnglesTable.Rows.Add("Mean");
+        }
 
+        private List<double> AnglesByFinger(int involvedSession, int motionType)
+        {
+            List<double> angles = new List<double>();
+            for (int i = 0; i < involvedSession; i++)
+            {
+                angles.Add(TransactOperations.RecoverAngleOfSession(SessionsIds.ElementAt(i), motionType));
+            }
+            return angles;
         }
 
     }

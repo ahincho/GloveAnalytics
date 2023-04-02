@@ -161,7 +161,7 @@ namespace GloveQueries
 
         public static double RecoverAngleOfSession(int sessionId, int motionType)
         {
-            List<string> fingersAngle = ["Thumb", "Index", "Middle", "Ring", "Pinky"];
+            List<string> fingersAngle = new List<string> { "Thumb", "Index", "Middle", "Ring", "Pinky" };
             string query = "SELECT ROUND(AVG(Han" + fingersAngle[motionType - 1] + "Angle), 2) FROM HandMotion WHERE HanSessionId = " + sessionId + " AND HanMotionType = " + motionType;
             double angleAvg = -1;
             sCon.Open();
@@ -171,7 +171,7 @@ namespace GloveQueries
                 mDataReader = mCommand.ExecuteReader();
                 while (mDataReader.Read())
                 {
-                    angleAvg = Math.Round(Convert.ToDouble(mDataReader[0]));
+                    angleAvg = Convert.ToDouble(mDataReader[0]);
                 }
                 mDataReader.Close();
                 return angleAvg;

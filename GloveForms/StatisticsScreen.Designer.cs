@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticsScreen));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.AnglesTable = new System.Windows.Forms.DataGridView();
             this.Finger = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sesion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sesion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sesion3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sesion4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mean = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MetersBySession = new System.Windows.Forms.PictureBox();
+            this.CoinsBySession = new System.Windows.Forms.PictureBox();
+            this.PatientIdOut = new System.Windows.Forms.TextBox();
+            this.IdsSessions = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnglesTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MetersBySession)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoinsBySession)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,25 +61,83 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // AnglesTable
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AnglesTable.AllowUserToAddRows = false;
+            this.AnglesTable.AllowUserToDeleteRows = false;
+            this.AnglesTable.AllowUserToResizeColumns = false;
+            this.AnglesTable.AllowUserToResizeRows = false;
+            this.AnglesTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AnglesTable.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.AnglesTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Agent Orange", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AnglesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.AnglesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AnglesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Finger,
             this.Sesion1,
             this.Sesion2,
             this.Sesion3,
             this.Sesion4,
             this.Mean});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 415);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(624, 255);
-            this.dataGridView1.TabIndex = 3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agent Orange", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AnglesTable.DefaultCellStyle = dataGridViewCellStyle4;
+            this.AnglesTable.GridColor = System.Drawing.SystemColors.Control;
+            this.AnglesTable.Location = new System.Drawing.Point(25, 487);
+            this.AnglesTable.Margin = new System.Windows.Forms.Padding(0);
+            this.AnglesTable.Name = "AnglesTable";
+            this.AnglesTable.ReadOnly = true;
+            this.AnglesTable.RowTemplate.Height = 25;
+            this.AnglesTable.Size = new System.Drawing.Size(624, 183);
+            this.AnglesTable.TabIndex = 3;
+            // 
+            // Finger
+            // 
+            this.Finger.HeaderText = "Finger";
+            this.Finger.Name = "Finger";
+            this.Finger.ReadOnly = true;
+            // 
+            // Sesion1
+            // 
+            this.Sesion1.HeaderText = "Sesion1";
+            this.Sesion1.Name = "Sesion1";
+            this.Sesion1.ReadOnly = true;
+            // 
+            // Sesion2
+            // 
+            this.Sesion2.HeaderText = "Sesion2";
+            this.Sesion2.Name = "Sesion2";
+            this.Sesion2.ReadOnly = true;
+            // 
+            // Sesion3
+            // 
+            this.Sesion3.HeaderText = "Sesion3";
+            this.Sesion3.Name = "Sesion3";
+            this.Sesion3.ReadOnly = true;
+            // 
+            // Sesion4
+            // 
+            this.Sesion4.HeaderText = "Sesion4";
+            this.Sesion4.Name = "Sesion4";
+            this.Sesion4.ReadOnly = true;
+            // 
+            // Mean
+            // 
+            this.Mean.HeaderText = "Mean";
+            this.Mean.Name = "Mean";
+            this.Mean.ReadOnly = true;
             // 
             // pictureBox2
             // 
@@ -89,73 +149,43 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // MetersBySession
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(680, 145);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(560, 255);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.MetersBySession.Location = new System.Drawing.Point(680, 145);
+            this.MetersBySession.Margin = new System.Windows.Forms.Padding(0);
+            this.MetersBySession.Name = "MetersBySession";
+            this.MetersBySession.Size = new System.Drawing.Size(560, 255);
+            this.MetersBySession.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MetersBySession.TabIndex = 5;
+            this.MetersBySession.TabStop = false;
             // 
-            // pictureBox4
+            // CoinsBySession
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(680, 415);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(560, 255);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.CoinsBySession.Location = new System.Drawing.Point(680, 415);
+            this.CoinsBySession.Margin = new System.Windows.Forms.Padding(0);
+            this.CoinsBySession.Name = "CoinsBySession";
+            this.CoinsBySession.Size = new System.Drawing.Size(560, 255);
+            this.CoinsBySession.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.CoinsBySession.TabIndex = 6;
+            this.CoinsBySession.TabStop = false;
             // 
-            // textBox1
+            // PatientIdOut
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(25, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 43);
-            this.textBox1.TabIndex = 7;
+            this.PatientIdOut.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PatientIdOut.Location = new System.Drawing.Point(25, 59);
+            this.PatientIdOut.Margin = new System.Windows.Forms.Padding(0);
+            this.PatientIdOut.Name = "PatientIdOut";
+            this.PatientIdOut.Size = new System.Drawing.Size(335, 43);
+            this.PatientIdOut.TabIndex = 7;
             // 
-            // listBox1
+            // IdsSessions
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(408, 24);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(241, 94);
-            this.listBox1.TabIndex = 8;
-            // 
-            // Finger
-            // 
-            this.Finger.HeaderText = "Finger";
-            this.Finger.Name = "Finger";
-            // 
-            // Sesion1
-            // 
-            this.Sesion1.HeaderText = "Sesion1";
-            this.Sesion1.Name = "Sesion1";
-            // 
-            // Sesion2
-            // 
-            this.Sesion2.HeaderText = "Sesion2";
-            this.Sesion2.Name = "Sesion2";
-            // 
-            // Sesion3
-            // 
-            this.Sesion3.HeaderText = "Sesion3";
-            this.Sesion3.Name = "Sesion3";
-            // 
-            // Sesion4
-            // 
-            this.Sesion4.HeaderText = "Sesion4";
-            this.Sesion4.Name = "Sesion4";
-            // 
-            // Mean
-            // 
-            this.Mean.HeaderText = "Mean";
-            this.Mean.Name = "Mean";
+            this.IdsSessions.FormattingEnabled = true;
+            this.IdsSessions.ItemHeight = 15;
+            this.IdsSessions.Location = new System.Drawing.Point(408, 24);
+            this.IdsSessions.Name = "IdsSessions";
+            this.IdsSessions.Size = new System.Drawing.Size(241, 94);
+            this.IdsSessions.TabIndex = 8;
             // 
             // StatisticsScreen
             // 
@@ -163,22 +193,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 716);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.IdsSessions);
+            this.Controls.Add(this.PatientIdOut);
+            this.Controls.Add(this.CoinsBySession);
+            this.Controls.Add(this.MetersBySession);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.AnglesTable);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "StatisticsScreen";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "CITESOFT - GloveApp (Statistics)";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnglesTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MetersBySession)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoinsBySession)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,12 +218,12 @@
 
         #endregion
         private PictureBox pictureBox1;
-        private DataGridView dataGridView1;
+        private DataGridView AnglesTable;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private TextBox textBox1;
-        private ListBox listBox1;
+        private PictureBox MetersBySession;
+        private PictureBox CoinsBySession;
+        private TextBox PatientIdOut;
+        private ListBox IdsSessions;
         private DataGridViewTextBoxColumn Finger;
         private DataGridViewTextBoxColumn Sesion1;
         private DataGridViewTextBoxColumn Sesion2;

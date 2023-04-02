@@ -18,7 +18,7 @@ namespace GloveForms
         public MainScreen()
         {
             InitializeComponent();
-            // CreateSessionAndMoves();
+            // CreateSessionAndMoves(); // Method to add random data about session and motions
         }
 
         /*
