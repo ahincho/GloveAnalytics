@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticsScreen));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AnglesLineChart = new System.Windows.Forms.PictureBox();
             this.AnglesTable = new System.Windows.Forms.DataGridView();
             this.Finger = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sesion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,27 +39,25 @@
             this.Sesion3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sesion4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mean = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MetersBySession = new System.Windows.Forms.PictureBox();
             this.CoinsBySession = new System.Windows.Forms.PictureBox();
             this.PatientIdOut = new System.Windows.Forms.TextBox();
-            this.IdsSessions = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SessionComboBox = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.AnglesLineChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnglesTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MetersBySession)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoinsBySession)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // AnglesLineChart
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 145);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 255);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.AnglesLineChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AnglesLineChart.Location = new System.Drawing.Point(25, 145);
+            this.AnglesLineChart.Margin = new System.Windows.Forms.Padding(0);
+            this.AnglesLineChart.Name = "AnglesLineChart";
+            this.AnglesLineChart.Size = new System.Drawing.Size(624, 320);
+            this.AnglesLineChart.TabIndex = 2;
+            this.AnglesLineChart.TabStop = false;
             // 
             // AnglesTable
             // 
@@ -70,14 +68,14 @@
             this.AnglesTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AnglesTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.AnglesTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Agent Orange", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AnglesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Agent Orange", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AnglesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.AnglesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AnglesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Finger,
@@ -86,14 +84,14 @@
             this.Sesion3,
             this.Sesion4,
             this.Mean});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agent Orange", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AnglesTable.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Agent Orange", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AnglesTable.DefaultCellStyle = dataGridViewCellStyle2;
             this.AnglesTable.GridColor = System.Drawing.SystemColors.Control;
             this.AnglesTable.Location = new System.Drawing.Point(25, 487);
             this.AnglesTable.Margin = new System.Windows.Forms.Padding(0);
@@ -139,16 +137,6 @@
             this.Mean.Name = "Mean";
             this.Mean.ReadOnly = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(349, 145);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(300, 255);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // MetersBySession
             // 
             this.MetersBySession.Location = new System.Drawing.Point(680, 145);
@@ -171,44 +159,44 @@
             // 
             // PatientIdOut
             // 
-            this.PatientIdOut.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PatientIdOut.Location = new System.Drawing.Point(25, 59);
+            this.PatientIdOut.Font = new System.Drawing.Font("Agent Orange", 14.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PatientIdOut.Location = new System.Drawing.Point(25, 96);
             this.PatientIdOut.Margin = new System.Windows.Forms.Padding(0);
             this.PatientIdOut.Name = "PatientIdOut";
-            this.PatientIdOut.Size = new System.Drawing.Size(335, 43);
+            this.PatientIdOut.Size = new System.Drawing.Size(335, 40);
             this.PatientIdOut.TabIndex = 7;
             // 
-            // IdsSessions
+            // SessionComboBox
             // 
-            this.IdsSessions.FormattingEnabled = true;
-            this.IdsSessions.ItemHeight = 15;
-            this.IdsSessions.Location = new System.Drawing.Point(408, 24);
-            this.IdsSessions.Name = "IdsSessions";
-            this.IdsSessions.Size = new System.Drawing.Size(241, 94);
-            this.IdsSessions.TabIndex = 8;
+            this.SessionComboBox.Font = new System.Drawing.Font("Agent Orange", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SessionComboBox.Location = new System.Drawing.Point(389, 96);
+            this.SessionComboBox.Margin = new System.Windows.Forms.Padding(0);
+            this.SessionComboBox.Name = "SessionComboBox";
+            this.SessionComboBox.Size = new System.Drawing.Size(260, 40);
+            this.SessionComboBox.TabIndex = 9;
+            this.SessionComboBox.SelectedIndexChanged += new System.EventHandler(this.SessionComboBox_SelectedIndexChanged);
             // 
             // StatisticsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::GloveForms.Properties.Resources.StatisticsBackground;
             this.ClientSize = new System.Drawing.Size(1264, 716);
-            this.Controls.Add(this.IdsSessions);
+            this.Controls.Add(this.SessionComboBox);
             this.Controls.Add(this.PatientIdOut);
             this.Controls.Add(this.CoinsBySession);
             this.Controls.Add(this.MetersBySession);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.AnglesTable);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.AnglesLineChart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "StatisticsScreen";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "CITESOFT - GloveApp (Statistics)";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnglesLineChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnglesTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MetersBySession)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoinsBySession)).EndInit();
             this.ResumeLayout(false);
@@ -217,18 +205,17 @@
         }
 
         #endregion
-        private PictureBox pictureBox1;
+        private PictureBox AnglesLineChart;
         private DataGridView AnglesTable;
-        private PictureBox pictureBox2;
         private PictureBox MetersBySession;
         private PictureBox CoinsBySession;
         private TextBox PatientIdOut;
-        private ListBox IdsSessions;
         private DataGridViewTextBoxColumn Finger;
         private DataGridViewTextBoxColumn Sesion1;
         private DataGridViewTextBoxColumn Sesion2;
         private DataGridViewTextBoxColumn Sesion3;
         private DataGridViewTextBoxColumn Sesion4;
         private DataGridViewTextBoxColumn Mean;
+        private ComboBox SessionComboBox;
     }
 }

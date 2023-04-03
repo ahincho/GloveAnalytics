@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>GloveIcon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="GloveIcon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ScottPlot.WinForms" Version="4.1.61" />
