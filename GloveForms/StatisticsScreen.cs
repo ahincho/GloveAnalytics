@@ -168,7 +168,7 @@ namespace GloveForms
 
         private void AnglesLineGraph(List<List<double>> anglesOfFingers)
         {
-            var plt = new ScottPlot.Plot(625, 320);
+            var plt = new ScottPlot.Plot(540, 270);
             // sample data
             double[] xAxis = { 0, 1, 2, 3 };
             for (int i = 0; i < anglesOfFingers.Count; i++)

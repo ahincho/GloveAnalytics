@@ -51,11 +51,11 @@
             // 
             // AnglesLineChart
             // 
-            this.AnglesLineChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AnglesLineChart.Location = new System.Drawing.Point(25, 145);
+            this.AnglesLineChart.BackColor = System.Drawing.Color.Transparent;
+            this.AnglesLineChart.Location = new System.Drawing.Point(67, 170);
             this.AnglesLineChart.Margin = new System.Windows.Forms.Padding(0);
             this.AnglesLineChart.Name = "AnglesLineChart";
-            this.AnglesLineChart.Size = new System.Drawing.Size(624, 320);
+            this.AnglesLineChart.Size = new System.Drawing.Size(540, 270);
             this.AnglesLineChart.TabIndex = 2;
             this.AnglesLineChart.TabStop = false;
             // 
@@ -168,11 +168,11 @@
             // 
             // SessionComboBox
             // 
-            this.SessionComboBox.Font = new System.Drawing.Font("Agent Orange", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SessionComboBox.Location = new System.Drawing.Point(389, 96);
+            this.SessionComboBox.Font = new System.Drawing.Font("Agent Orange", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SessionComboBox.Location = new System.Drawing.Point(429, 103);
             this.SessionComboBox.Margin = new System.Windows.Forms.Padding(0);
             this.SessionComboBox.Name = "SessionComboBox";
-            this.SessionComboBox.Size = new System.Drawing.Size(260, 40);
+            this.SessionComboBox.Size = new System.Drawing.Size(200, 26);
             this.SessionComboBox.TabIndex = 9;
             this.SessionComboBox.SelectedIndexChanged += new System.EventHandler(this.SessionComboBox_SelectedIndexChanged);
             // 
