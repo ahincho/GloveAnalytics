@@ -53,7 +53,7 @@ namespace GloveQueries
         public static double RecoverMetersOfSession(int sesId)
         {
             string query = "SELECT SesMeters FROM Session WHERE SesId = " + sesId;
-            double meters = -1;
+            double meters = 0;
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             try
@@ -80,7 +80,7 @@ namespace GloveQueries
         public static double RecoverAverageMeters(int patientId)
         {
             string query = "SELECT AVG(SesMeters) FROM Session WHERE SesPatientId = " + patientId;
-            double metersAvg = -1;
+            double metersAvg = 0;
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             try
@@ -107,7 +107,7 @@ namespace GloveQueries
         public static double RecoverCoinsOfSession(int sesId)
         {
             string query = "SELECT SesCoins FROM Session WHERE SesId = " + sesId;
-            double coins = -1;
+            double coins = 0;
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             try
@@ -134,7 +134,7 @@ namespace GloveQueries
         public static double RecoverAverageCoins(int patientId)
         {
             string query = "SELECT AVG(SesCoins) FROM Session WHERE SesPatientId = " + patientId;
-            double coinsAvg = -1;
+            double coinsAvg = 0;
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             try
@@ -163,7 +163,7 @@ namespace GloveQueries
         {
             List<string> fingersAngle = new List<string> { "Thumb", "Index", "Middle", "Ring", "Pinky" };
             string query = "SELECT ROUND(AVG(Han" + fingersAngle[motionType - 1] + "Angle), 2) FROM HandMotion WHERE HanSessionId = " + sessionId + " AND HanMotionType = " + motionType;
-            double angleAvg = -1;
+            double angleAvg = 0;
             sCon.Open();
             mCommand = new SQLiteCommand(query, sCon);
             try
